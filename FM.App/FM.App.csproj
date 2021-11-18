@@ -1,0 +1,263 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="15.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <Import Project="..\packages\EntityFramework.6.4.4\build\EntityFramework.props" Condition="Exists('..\packages\EntityFramework.6.4.4\build\EntityFramework.props')" />
+  <Import Project="$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props" Condition="Exists('$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props')" />
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProjectGuid>{EBF15121-80BB-49DE-A953-A1FA24EDD4A0}</ProjectGuid>
+    <OutputType>WinExe</OutputType>
+    <RootNamespace>FM.App</RootNamespace>
+    <AssemblyName>FM.App</AssemblyName>
+    <TargetFrameworkVersion>v4.7</TargetFrameworkVersion>
+    <FileAlignment>512</FileAlignment>
+    <AutoGenerateBindingRedirects>true</AutoGenerateBindingRedirects>
+    <Deterministic>true</Deterministic>
+    <NuGetPackageImportStamp>
+    </NuGetPackageImportStamp>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <PlatformTarget>AnyCPU</PlatformTarget>
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\Debug\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <PlatformTarget>AnyCPU</PlatformTarget>
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\Release\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="EntityFramework, Version=6.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089, processorArchitecture=MSIL">
+      <HintPath>..\packages\EntityFramework.6.4.4\lib\net45\EntityFramework.dll</HintPath>
+    </Reference>
+    <Reference Include="EntityFramework.SqlServer, Version=6.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089, processorArchitecture=MSIL">
+      <HintPath>..\packages\EntityFramework.6.4.4\lib\net45\EntityFramework.SqlServer.dll</HintPath>
+    </Reference>
+    <Reference Include="System" />
+    <Reference Include="System.ComponentModel.DataAnnotations" />
+    <Reference Include="System.Core" />
+    <Reference Include="System.Xml.Linq" />
+    <Reference Include="System.Data.DataSetExtensions" />
+    <Reference Include="Microsoft.CSharp" />
+    <Reference Include="System.Data" />
+    <Reference Include="System.Deployment" />
+    <Reference Include="System.Drawing" />
+    <Reference Include="System.Net.Http" />
+    <Reference Include="System.Windows.Forms" />
+    <Reference Include="System.Xml" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="BaseForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Form1.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Form1.Designer.cs">
+      <DependentUpon>Form1.cs</DependentUpon>
+    </Compile>
+    <Compile Include="frmBusinessSector.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frmBusinessSector.Designer.cs">
+      <DependentUpon>frmBusinessSector.cs</DependentUpon>
+    </Compile>
+    <Compile Include="frmCitizenDetailsInfo.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frmCitizenDetailsInfo.Designer.cs">
+      <DependentUpon>frmCitizenDetailsInfo.cs</DependentUpon>
+    </Compile>
+    <Compile Include="frmCitizenView.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frmCitizenView.Designer.cs">
+      <DependentUpon>frmCitizenView.cs</DependentUpon>
+    </Compile>
+    <Compile Include="frmEducationalLevel.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frmEducationalLevel.Designer.cs">
+      <DependentUpon>frmEducationalLevel.cs</DependentUpon>
+    </Compile>
+    <Compile Include="frmElectionRole.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frmElectionRole.Designer.cs">
+      <DependentUpon>frmElectionRole.cs</DependentUpon>
+    </Compile>
+    <Compile Include="frmHomeType.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frmHomeType.Designer.cs">
+      <DependentUpon>frmHomeType.cs</DependentUpon>
+    </Compile>
+    <Compile Include="frmMain.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frmMain.Designer.cs">
+      <DependentUpon>frmMain.cs</DependentUpon>
+    </Compile>
+    <Compile Include="frmMaritalStatus.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frmMaritalStatus.Designer.cs">
+      <DependentUpon>frmMaritalStatus.cs</DependentUpon>
+    </Compile>
+    <Compile Include="frmMemberRelationType.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frmMemberRelationType.Designer.cs">
+      <DependentUpon>frmMemberRelationType.cs</DependentUpon>
+    </Compile>
+    <Compile Include="frmPartyDivision.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frmPartyDivision.Designer.cs">
+      <DependentUpon>frmPartyDivision.cs</DependentUpon>
+    </Compile>
+    <Compile Include="frmPartyPosition.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frmPartyPosition.Designer.cs">
+      <DependentUpon>frmPartyPosition.cs</DependentUpon>
+    </Compile>
+    <Compile Include="frmProvince.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frmProvince.Designer.cs">
+      <DependentUpon>frmProvince.cs</DependentUpon>
+    </Compile>
+    <Compile Include="frmResultType.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frmResultType.Designer.cs">
+      <DependentUpon>frmResultType.cs</DependentUpon>
+    </Compile>
+    <Compile Include="frmSearch.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frmSearch.Designer.cs">
+      <DependentUpon>frmSearch.cs</DependentUpon>
+    </Compile>
+    <Compile Include="frmService.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frmService.Designer.cs">
+      <DependentUpon>frmService.cs</DependentUpon>
+    </Compile>
+    <Compile Include="frmServiceType.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frmServiceType.Designer.cs">
+      <DependentUpon>frmServiceType.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Program.cs" />
+    <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="SD.cs" />
+    <EmbeddedResource Include="Form1.resx">
+      <DependentUpon>Form1.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="frmBusinessSector.resx">
+      <DependentUpon>frmBusinessSector.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="frmCitizenDetailsInfo.resx">
+      <DependentUpon>frmCitizenDetailsInfo.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="frmCitizenView.resx">
+      <DependentUpon>frmCitizenView.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="frmEducationalLevel.resx">
+      <DependentUpon>frmEducationalLevel.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="frmElectionRole.resx">
+      <DependentUpon>frmElectionRole.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="frmHomeType.resx">
+      <DependentUpon>frmHomeType.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="frmMain.resx">
+      <DependentUpon>frmMain.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="frmMaritalStatus.resx">
+      <DependentUpon>frmMaritalStatus.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="frmMemberRelationType.resx">
+      <DependentUpon>frmMemberRelationType.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="frmPartyDivision.resx">
+      <DependentUpon>frmPartyDivision.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="frmPartyPosition.resx">
+      <DependentUpon>frmPartyPosition.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="frmProvince.resx">
+      <DependentUpon>frmProvince.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="frmResultType.resx">
+      <DependentUpon>frmResultType.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="frmSearch.resx">
+      <DependentUpon>frmSearch.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="frmService.resx">
+      <DependentUpon>frmService.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="frmServiceType.resx">
+      <DependentUpon>frmServiceType.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Properties\Resources.resx">
+      <Generator>ResXFileCodeGenerator</Generator>
+      <LastGenOutput>Resources.Designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <Compile Include="Properties\Resources.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DependentUpon>Resources.resx</DependentUpon>
+    </Compile>
+    <None Include="packages.config" />
+    <None Include="Properties\DataSources\FM.Models.Citizen.datasource" />
+    <None Include="Properties\Settings.settings">
+      <Generator>SettingsSingleFileGenerator</Generator>
+      <LastGenOutput>Settings.Designer.cs</LastGenOutput>
+    </None>
+    <Compile Include="Properties\Settings.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DependentUpon>Settings.settings</DependentUpon>
+      <DesignTimeSharedInput>True</DesignTimeSharedInput>
+    </Compile>
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="App.config">
+      <SubType>Designer</SubType>
+    </None>
+  </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="..\FM.BusinessLogic\FM.BusinessLogic.csproj">
+      <Project>{E08DB046-34E0-4FF6-AFC0-14CE9011B2F3}</Project>
+      <Name>FM.BusinessLogic</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\FM.Models\FM.Models.csproj">
+      <Project>{017cc710-165c-49d7-bb00-ddf18c944c83}</Project>
+      <Name>FM.Models</Name>
+    </ProjectReference>
+  </ItemGroup>
+  <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
+  <Target Name="EnsureNuGetPackageBuildImports" BeforeTargets="PrepareForBuild">
+    <PropertyGroup>
+      <ErrorText>This project references NuGet package(s) that are missing on this computer. Use NuGet Package Restore to download them.  For more information, see http://go.microsoft.com/fwlink/?LinkID=322105. The missing file is {0}.</ErrorText>
+    </PropertyGroup>
+    <Error Condition="!Exists('..\packages\EntityFramework.6.4.4\build\EntityFramework.props')" Text="$([System.String]::Format('$(ErrorText)', '..\packages\EntityFramework.6.4.4\build\EntityFramework.props'))" />
+    <Error Condition="!Exists('..\packages\EntityFramework.6.4.4\build\EntityFramework.targets')" Text="$([System.String]::Format('$(ErrorText)', '..\packages\EntityFramework.6.4.4\build\EntityFramework.targets'))" />
+  </Target>
+  <Import Project="..\packages\EntityFramework.6.4.4\build\EntityFramework.targets" Condition="Exists('..\packages\EntityFramework.6.4.4\build\EntityFramework.targets')" />
+</Project>

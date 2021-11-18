@@ -1,0 +1,585 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<root>
+  <!-- 
+    Microsoft ResX Schema 
+    
+    Version 2.0
+    
+    The primary goals of this format is to allow a simple XML format 
+    that is mostly human readable. The generation and parsing of the 
+    various data types are done through the TypeConverter classes 
+    associated with the data types.
+    
+    Example:
+    
+    ... ado.net/XML headers & schema ...
+    <resheader name="resmimetype">text/microsoft-resx</resheader>
+    <resheader name="version">2.0</resheader>
+    <resheader name="reader">System.Resources.ResXResourceReader, System.Windows.Forms, ...</resheader>
+    <resheader name="writer">System.Resources.ResXResourceWriter, System.Windows.Forms, ...</resheader>
+    <data name="Name1"><value>this is my long string</value><comment>this is a comment</comment></data>
+    <data name="Color1" type="System.Drawing.Color, System.Drawing">Blue</data>
+    <data name="Bitmap1" mimetype="application/x-microsoft.net.object.binary.base64">
+        <value>[base64 mime encoded serialized .NET Framework object]</value>
+    </data>
+    <data name="Icon1" type="System.Drawing.Icon, System.Drawing" mimetype="application/x-microsoft.net.object.bytearray.base64">
+        <value>[base64 mime encoded string representing a byte array form of the .NET Framework object]</value>
+        <comment>This is a comment</comment>
+    </data>
+                
+    There are any number of "resheader" rows that contain simple 
+    name/value pairs.
+    
+    Each data row contains a name, and value. The row also contains a 
+    type or mimetype. Type corresponds to a .NET class that support 
+    text/value conversion through the TypeConverter architecture. 
+    Classes that don't support this are serialized and stored with the 
+    mimetype set.
+    
+    The mimetype is used for serialized objects, and tells the 
+    ResXResourceReader how to depersist the object. This is currently not 
+    extensible. For a given mimetype the value must be set accordingly:
+    
+    Note - application/x-microsoft.net.object.binary.base64 is the format 
+    that the ResXResourceWriter will generate, however the reader can 
+    read any of the formats listed below.
+    
+    mimetype: application/x-microsoft.net.object.binary.base64
+    value   : The object must be serialized with 
+            : System.Runtime.Serialization.Formatters.Binary.BinaryFormatter
+            : and then encoded with base64 encoding.
+    
+    mimetype: application/x-microsoft.net.object.soap.base64
+    value   : The object must be serialized with 
+            : System.Runtime.Serialization.Formatters.Soap.SoapFormatter
+            : and then encoded with base64 encoding.
+
+    mimetype: application/x-microsoft.net.object.bytearray.base64
+    value   : The object must be serialized into a byte array 
+            : using a System.ComponentModel.TypeConverter
+            : and then encoded with base64 encoding.
+    -->
+  <xsd:schema id="root" xmlns="" xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:msdata="urn:schemas-microsoft-com:xml-msdata">
+    <xsd:import namespace="http://www.w3.org/XML/1998/namespace" />
+    <xsd:element name="root" msdata:IsDataSet="true">
+      <xsd:complexType>
+        <xsd:choice maxOccurs="unbounded">
+          <xsd:element name="metadata">
+            <xsd:complexType>
+              <xsd:sequence>
+                <xsd:element name="value" type="xsd:string" minOccurs="0" />
+              </xsd:sequence>
+              <xsd:attribute name="name" use="required" type="xsd:string" />
+              <xsd:attribute name="type" type="xsd:string" />
+              <xsd:attribute name="mimetype" type="xsd:string" />
+              <xsd:attribute ref="xml:space" />
+            </xsd:complexType>
+          </xsd:element>
+          <xsd:element name="assembly">
+            <xsd:complexType>
+              <xsd:attribute name="alias" type="xsd:string" />
+              <xsd:attribute name="name" type="xsd:string" />
+            </xsd:complexType>
+          </xsd:element>
+          <xsd:element name="data">
+            <xsd:complexType>
+              <xsd:sequence>
+                <xsd:element name="value" type="xsd:string" minOccurs="0" msdata:Ordinal="1" />
+                <xsd:element name="comment" type="xsd:string" minOccurs="0" msdata:Ordinal="2" />
+              </xsd:sequence>
+              <xsd:attribute name="name" type="xsd:string" use="required" msdata:Ordinal="1" />
+              <xsd:attribute name="type" type="xsd:string" msdata:Ordinal="3" />
+              <xsd:attribute name="mimetype" type="xsd:string" msdata:Ordinal="4" />
+              <xsd:attribute ref="xml:space" />
+            </xsd:complexType>
+          </xsd:element>
+          <xsd:element name="resheader">
+            <xsd:complexType>
+              <xsd:sequence>
+                <xsd:element name="value" type="xsd:string" minOccurs="0" msdata:Ordinal="1" />
+              </xsd:sequence>
+              <xsd:attribute name="name" type="xsd:string" use="required" />
+            </xsd:complexType>
+          </xsd:element>
+        </xsd:choice>
+      </xsd:complexType>
+    </xsd:element>
+  </xsd:schema>
+  <resheader name="resmimetype">
+    <value>text/microsoft-resx</value>
+  </resheader>
+  <resheader name="version">
+    <value>2.0</value>
+  </resheader>
+  <resheader name="reader">
+    <value>System.Resources.ResXResourceReader, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </resheader>
+  <resheader name="writer">
+    <value>System.Resources.ResXResourceWriter, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </resheader>
+  <data name="&gt;&gt;idDataGridViewTextBoxColumn.Type" xml:space="preserve">
+    <value>System.Windows.Forms.DataGridViewTextBoxColumn, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="registerNumberDataGridViewTextBoxColumn.HeaderText" xml:space="preserve">
+    <value>رقم السجل</value>
+  </data>
+  <data name="motherFullNameDataGridViewTextBoxColumn.HeaderText" xml:space="preserve">
+    <value>MotherFullName</value>
+  </data>
+  <data name="&gt;&gt;dateOfBirthDataGridViewTextBoxColumn.Name" xml:space="preserve">
+    <value>dateOfBirthDataGridViewTextBoxColumn</value>
+  </data>
+  <data name="&gt;&gt;_gbSearchResult.Name" xml:space="preserve">
+    <value>_gbSearchResult</value>
+  </data>
+  <assembly alias="mscorlib" name="mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089" />
+  <data name="_dgSearchResult.RowHeadersWidth" type="System.Int32, mscorlib">
+    <value>20</value>
+  </data>
+  <data name="&gt;&gt;_gbSearchResult.Parent" xml:space="preserve">
+    <value>$this</value>
+  </data>
+  <data name="_lblLastName.TabIndex" type="System.Int32, mscorlib">
+    <value>5</value>
+  </data>
+  <data name="&gt;&gt;_txtBoxFatherName.Parent" xml:space="preserve">
+    <value>_gbSearch</value>
+  </data>
+  <assembly alias="System.Drawing" name="System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a" />
+  <data name="_txtBoxFirstName.Location" type="System.Drawing.Point, System.Drawing">
+    <value>572, 48</value>
+  </data>
+  <data name="_lblFatherName.Location" type="System.Drawing.Point, System.Drawing">
+    <value>501, 27</value>
+  </data>
+  <data name="&gt;&gt;_btnClear.Type" xml:space="preserve">
+    <value>System.Windows.Forms.Button, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;_txtBoxLastName.Parent" xml:space="preserve">
+    <value>_gbSearch</value>
+  </data>
+  <data name="&gt;&gt;_dgSearchResult.ZOrder" xml:space="preserve">
+    <value>0</value>
+  </data>
+  <data name="_lblLastName.Location" type="System.Drawing.Point, System.Drawing">
+    <value>308, 27</value>
+  </data>
+  <data name="_lblFatherName.Size" type="System.Drawing.Size, System.Drawing">
+    <value>68, 14</value>
+  </data>
+  <data name="&gt;&gt;_lblFatherName.Type" xml:space="preserve">
+    <value>System.Windows.Forms.Label, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;_btnSearch.Name" xml:space="preserve">
+    <value>_btnSearch</value>
+  </data>
+  <data name="&gt;&gt;_gbSearchResult.ZOrder" xml:space="preserve">
+    <value>0</value>
+  </data>
+  <data name="&gt;&gt;_lblFirstName.Type" xml:space="preserve">
+    <value>System.Windows.Forms.Label, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="firstNameDataGridViewTextBoxColumn.Width" type="System.Int32, mscorlib">
+    <value>106</value>
+  </data>
+  <data name="$this.Text" xml:space="preserve">
+    <value> </value>
+  </data>
+  <data name="&gt;&gt;citizenBindingSource.Type" xml:space="preserve">
+    <value>System.Windows.Forms.BindingSource, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="_dgSearchResult.TabIndex" type="System.Int32, mscorlib">
+    <value>0</value>
+  </data>
+  <data name="&gt;&gt;_lblLastName.Type" xml:space="preserve">
+    <value>System.Windows.Forms.Label, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;_gbSearch.Type" xml:space="preserve">
+    <value>System.Windows.Forms.GroupBox, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;_lblLastName.ZOrder" xml:space="preserve">
+    <value>2</value>
+  </data>
+  <data name="religionDataGridViewTextBoxColumn.HeaderText" xml:space="preserve">
+    <value>Religion</value>
+  </data>
+  <data name="&gt;&gt;_txtBoxFatherName.Type" xml:space="preserve">
+    <value>System.Windows.Forms.TextBox, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="_txtBoxFatherName.Size" type="System.Drawing.Size, System.Drawing">
+    <value>198, 20</value>
+  </data>
+  <data name="&gt;&gt;religionSectDataGridViewTextBoxColumn.Name" xml:space="preserve">
+    <value>religionSectDataGridViewTextBoxColumn</value>
+  </data>
+  <data name="&gt;&gt;religionDataGridViewTextBoxColumn.Name" xml:space="preserve">
+    <value>religionDataGridViewTextBoxColumn</value>
+  </data>
+  <data name="fatherNameDataGridViewTextBoxColumn.Width" type="System.Int32, mscorlib">
+    <value>106</value>
+  </data>
+  <data name="_dgSearchResult.Size" type="System.Drawing.Size, System.Drawing">
+    <value>764, 306</value>
+  </data>
+  <data name="$this.AutoScaleDimensions" type="System.Drawing.SizeF, System.Drawing">
+    <value>6, 13</value>
+  </data>
+  <data name="&gt;&gt;_lblFirstName.ZOrder" xml:space="preserve">
+    <value>4</value>
+  </data>
+  <data name="&gt;&gt;lastNameDataGridViewTextBoxColumn.Type" xml:space="preserve">
+    <value>System.Windows.Forms.DataGridViewTextBoxColumn, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="registerPlaceDataGridViewTextBoxColumn.Width" type="System.Int32, mscorlib">
+    <value>106</value>
+  </data>
+  <data name="&gt;&gt;_lblLastName.Parent" xml:space="preserve">
+    <value>_gbSearch</value>
+  </data>
+  <data name="&gt;&gt;_txtBoxLastName.Type" xml:space="preserve">
+    <value>System.Windows.Forms.TextBox, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;_txtBoxLastName.Name" xml:space="preserve">
+    <value>_txtBoxLastName</value>
+  </data>
+  <data name="idDataGridViewTextBoxColumn.HeaderText" xml:space="preserve">
+    <value>رقم</value>
+  </data>
+  <data name="&gt;&gt;firstNameDataGridViewTextBoxColumn.Type" xml:space="preserve">
+    <value>System.Windows.Forms.DataGridViewTextBoxColumn, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="districtDataGridViewTextBoxColumn.Visible" type="System.Boolean, mscorlib">
+    <value>False</value>
+  </data>
+  <data name="_txtBoxFirstName.Size" type="System.Drawing.Size, System.Drawing">
+    <value>198, 20</value>
+  </data>
+  <data name="&gt;&gt;_btnClear.Parent" xml:space="preserve">
+    <value>_gbSearch</value>
+  </data>
+  <data name="&gt;&gt;firstNameDataGridViewTextBoxColumn.Name" xml:space="preserve">
+    <value>firstNameDataGridViewTextBoxColumn</value>
+  </data>
+  <data name="&gt;&gt;religionSectDataGridViewTextBoxColumn.Type" xml:space="preserve">
+    <value>System.Windows.Forms.DataGridViewTextBoxColumn, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="_gbSearchResult.Location" type="System.Drawing.Point, System.Drawing">
+    <value>12, 101</value>
+  </data>
+  <data name="_lblFirstName.TabIndex" type="System.Int32, mscorlib">
+    <value>3</value>
+  </data>
+  <data name="_lblLastName.Text" xml:space="preserve">
+    <value>الشهرة :</value>
+  </data>
+  <data name="_lblFatherName.Font" type="System.Drawing.Font, System.Drawing">
+    <value>Tahoma, 9pt, style=Bold</value>
+  </data>
+  <data name="&gt;&gt;motherFullNameDataGridViewTextBoxColumn.Name" xml:space="preserve">
+    <value>motherFullNameDataGridViewTextBoxColumn</value>
+  </data>
+  <data name="&gt;&gt;lastNameDataGridViewTextBoxColumn.Name" xml:space="preserve">
+    <value>lastNameDataGridViewTextBoxColumn</value>
+  </data>
+  <data name="_lblFirstName.Text" xml:space="preserve">
+    <value>الاسم :</value>
+  </data>
+  <data name="_lblFirstName.AutoSize" type="System.Boolean, mscorlib">
+    <value>True</value>
+  </data>
+  <data name="&gt;&gt;$this.Name" xml:space="preserve">
+    <value>frmSearch</value>
+  </data>
+  <data name="fullNameDataGridViewTextBoxColumn.HeaderText" xml:space="preserve">
+    <value>FullName</value>
+  </data>
+  <data name="fullNameDataGridViewTextBoxColumn.Width" type="System.Int32, mscorlib">
+    <value>106</value>
+  </data>
+  <data name="&gt;&gt;_btnClear.ZOrder" xml:space="preserve">
+    <value>0</value>
+  </data>
+  <data name="&gt;&gt;registerPlaceDataGridViewTextBoxColumn.Type" xml:space="preserve">
+    <value>System.Windows.Forms.DataGridViewTextBoxColumn, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;_dgSearchResult.Type" xml:space="preserve">
+    <value>System.Windows.Forms.DataGridView, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;_lblFatherName.Name" xml:space="preserve">
+    <value>_lblFatherName</value>
+  </data>
+  <data name="&gt;&gt;_gbSearch.Name" xml:space="preserve">
+    <value>_gbSearch</value>
+  </data>
+  <data name="_btnClear.Font" type="System.Drawing.Font, System.Drawing">
+    <value>Tahoma, 8pt, style=Bold</value>
+  </data>
+  <data name="_lblFatherName.Text" xml:space="preserve">
+    <value>اسم الاب :</value>
+  </data>
+  <data name="districtDataGridViewTextBoxColumn.HeaderText" xml:space="preserve">
+    <value>District</value>
+  </data>
+  <data name="&gt;&gt;_txtBoxFirstName.Parent" xml:space="preserve">
+    <value>_gbSearch</value>
+  </data>
+  <data name="&gt;&gt;citizenBindingSource.Name" xml:space="preserve">
+    <value>citizenBindingSource</value>
+  </data>
+  <assembly alias="System.Windows.Forms" name="System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089" />
+  <data name="$this.StartPosition" type="System.Windows.Forms.FormStartPosition, System.Windows.Forms">
+    <value>CenterScreen</value>
+  </data>
+  <data name="religionSectDataGridViewTextBoxColumn.Visible" type="System.Boolean, mscorlib">
+    <value>False</value>
+  </data>
+  <data name="&gt;&gt;registerPlaceDataGridViewTextBoxColumn.Name" xml:space="preserve">
+    <value>registerPlaceDataGridViewTextBoxColumn</value>
+  </data>
+  <data name="&gt;&gt;_gbSearchResult.Type" xml:space="preserve">
+    <value>System.Windows.Forms.GroupBox, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="_btnSearch.Font" type="System.Drawing.Font, System.Drawing">
+    <value>Tahoma, 8pt, style=Bold</value>
+  </data>
+  <data name="_lblLastName.AutoSize" type="System.Boolean, mscorlib">
+    <value>True</value>
+  </data>
+  <data name="idDataGridViewTextBoxColumn.Width" type="System.Int32, mscorlib">
+    <value>106</value>
+  </data>
+  <data name="&gt;&gt;_lblFatherName.ZOrder" xml:space="preserve">
+    <value>3</value>
+  </data>
+  <data name="$this.RightToLeftLayout" type="System.Boolean, mscorlib">
+    <value>True</value>
+  </data>
+  <data name="_lblLastName.Font" type="System.Drawing.Font, System.Drawing">
+    <value>Tahoma, 9pt, style=Bold</value>
+  </data>
+  <data name="_lblFatherName.AutoSize" type="System.Boolean, mscorlib">
+    <value>True</value>
+  </data>
+  <data name="fatherNameDataGridViewTextBoxColumn.HeaderText" xml:space="preserve">
+    <value>اسم الأب</value>
+  </data>
+  <data name="&gt;&gt;_dgSearchResult.Name" xml:space="preserve">
+    <value>_dgSearchResult</value>
+  </data>
+  <data name="motherFullNameDataGridViewTextBoxColumn.Visible" type="System.Boolean, mscorlib">
+    <value>False</value>
+  </data>
+  <data name="_txtBoxFirstName.TabIndex" type="System.Int32, mscorlib">
+    <value>0</value>
+  </data>
+  <data name="_txtBoxFatherName.TabIndex" type="System.Int32, mscorlib">
+    <value>1</value>
+  </data>
+  <data name="_btnClear.Size" type="System.Drawing.Size, System.Drawing">
+    <value>75, 23</value>
+  </data>
+  <data name="&gt;&gt;_lblFirstName.Name" xml:space="preserve">
+    <value>_lblFirstName</value>
+  </data>
+  <data name="religionDataGridViewTextBoxColumn.Visible" type="System.Boolean, mscorlib">
+    <value>False</value>
+  </data>
+  <data name="lastNameDataGridViewTextBoxColumn.HeaderText" xml:space="preserve">
+    <value>الشهرة</value>
+  </data>
+  <data name="&gt;&gt;fullNameDataGridViewTextBoxColumn.Type" xml:space="preserve">
+    <value>System.Windows.Forms.DataGridViewTextBoxColumn, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="dateOfBirthDataGridViewTextBoxColumn.HeaderText" xml:space="preserve">
+    <value>DateOfBirth</value>
+  </data>
+  <data name="&gt;&gt;fatherNameDataGridViewTextBoxColumn.Type" xml:space="preserve">
+    <value>System.Windows.Forms.DataGridViewTextBoxColumn, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="_btnSearch.TabIndex" type="System.Int32, mscorlib">
+    <value>6</value>
+  </data>
+  <data name="_btnSearch.Text" xml:space="preserve">
+    <value>بحث</value>
+  </data>
+  <data name="_txtBoxLastName.Location" type="System.Drawing.Point, System.Drawing">
+    <value>164, 48</value>
+  </data>
+  <data name="registerNumberDataGridViewTextBoxColumn.Width" type="System.Int32, mscorlib">
+    <value>106</value>
+  </data>
+  <data name="_gbSearchResult.Size" type="System.Drawing.Size, System.Drawing">
+    <value>776, 337</value>
+  </data>
+  <data name="_gbSearch.Location" type="System.Drawing.Point, System.Drawing">
+    <value>12, 12</value>
+  </data>
+  <data name="&gt;&gt;_txtBoxFirstName.Name" xml:space="preserve">
+    <value>_txtBoxFirstName</value>
+  </data>
+  <data name="&gt;&gt;_lblLastName.Name" xml:space="preserve">
+    <value>_lblLastName</value>
+  </data>
+  <data name="_btnClear.Location" type="System.Drawing.Point, System.Drawing">
+    <value>6, 46</value>
+  </data>
+  <data name="_gbSearch.Size" type="System.Drawing.Size, System.Drawing">
+    <value>776, 83</value>
+  </data>
+  <data name="&gt;&gt;_btnClear.Name" xml:space="preserve">
+    <value>_btnClear</value>
+  </data>
+  <data name="_lblFirstName.Location" type="System.Drawing.Point, System.Drawing">
+    <value>721, 27</value>
+  </data>
+  <data name="religionSectDataGridViewTextBoxColumn.HeaderText" xml:space="preserve">
+    <value>ReligionSect</value>
+  </data>
+  <data name="_lblFirstName.Font" type="System.Drawing.Font, System.Drawing">
+    <value>Tahoma, 9pt, style=Bold</value>
+  </data>
+  <data name="_dgSearchResult.Location" type="System.Drawing.Point, System.Drawing">
+    <value>6, 19</value>
+  </data>
+  <data name="&gt;&gt;fatherNameDataGridViewTextBoxColumn.Name" xml:space="preserve">
+    <value>fatherNameDataGridViewTextBoxColumn</value>
+  </data>
+  <data name="_lblFatherName.TabIndex" type="System.Int32, mscorlib">
+    <value>4</value>
+  </data>
+  <data name="&gt;&gt;$this.Type" xml:space="preserve">
+    <value>System.Windows.Forms.Form, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;fullNameDataGridViewTextBoxColumn.Name" xml:space="preserve">
+    <value>fullNameDataGridViewTextBoxColumn</value>
+  </data>
+  <data name="&gt;&gt;idDataGridViewTextBoxColumn.Name" xml:space="preserve">
+    <value>idDataGridViewTextBoxColumn</value>
+  </data>
+  <data name="&gt;&gt;_gbSearch.ZOrder" xml:space="preserve">
+    <value>1</value>
+  </data>
+  <data name="&gt;&gt;dateOfBirthDataGridViewTextBoxColumn.Type" xml:space="preserve">
+    <value>System.Windows.Forms.DataGridViewTextBoxColumn, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;_lblFatherName.Parent" xml:space="preserve">
+    <value>_gbSearch</value>
+  </data>
+  <data name="firstNameDataGridViewTextBoxColumn.HeaderText" xml:space="preserve">
+    <value>الأسم</value>
+  </data>
+  <data name="_gbSearch.TabIndex" type="System.Int32, mscorlib">
+    <value>0</value>
+  </data>
+  <data name="_txtBoxLastName.Size" type="System.Drawing.Size, System.Drawing">
+    <value>198, 20</value>
+  </data>
+  <data name="_txtBoxFatherName.Location" type="System.Drawing.Point, System.Drawing">
+    <value>368, 48</value>
+  </data>
+  <data name="&gt;&gt;_btnSearch.Type" xml:space="preserve">
+    <value>System.Windows.Forms.Button, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;registerNumberDataGridViewTextBoxColumn.Name" xml:space="preserve">
+    <value>registerNumberDataGridViewTextBoxColumn</value>
+  </data>
+  <data name="&gt;&gt;_txtBoxLastName.ZOrder" xml:space="preserve">
+    <value>5</value>
+  </data>
+  <data name="_lblFirstName.Size" type="System.Drawing.Size, System.Drawing">
+    <value>49, 14</value>
+  </data>
+  <data name="dateOfBirthDataGridViewTextBoxColumn.Visible" type="System.Boolean, mscorlib">
+    <value>False</value>
+  </data>
+  <data name="&gt;&gt;_txtBoxFirstName.ZOrder" xml:space="preserve">
+    <value>7</value>
+  </data>
+  <data name="&gt;&gt;_lblFirstName.Parent" xml:space="preserve">
+    <value>_gbSearch</value>
+  </data>
+  <data name="_btnClear.Text" xml:space="preserve">
+    <value>مسح</value>
+  </data>
+  <data name="&gt;&gt;motherFullNameDataGridViewTextBoxColumn.Type" xml:space="preserve">
+    <value>System.Windows.Forms.DataGridViewTextBoxColumn, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="_btnSearch.Location" type="System.Drawing.Point, System.Drawing">
+    <value>83, 46</value>
+  </data>
+  <data name="&gt;&gt;_btnSearch.Parent" xml:space="preserve">
+    <value>_gbSearch</value>
+  </data>
+  <data name="_gbSearchResult.TabIndex" type="System.Int32, mscorlib">
+    <value>1</value>
+  </data>
+  <data name="&gt;&gt;provinceDataGridViewTextBoxColumn.Type" xml:space="preserve">
+    <value>System.Windows.Forms.DataGridViewTextBoxColumn, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="_btnClear.TabIndex" type="System.Int32, mscorlib">
+    <value>7</value>
+  </data>
+  <data name="lastNameDataGridViewTextBoxColumn.Width" type="System.Int32, mscorlib">
+    <value>106</value>
+  </data>
+  <data name="$this.RightToLeft" type="System.Windows.Forms.RightToLeft, System.Windows.Forms">
+    <value>Yes</value>
+  </data>
+  <data name="_txtBoxLastName.TabIndex" type="System.Int32, mscorlib">
+    <value>2</value>
+  </data>
+  <data name="&gt;&gt;religionDataGridViewTextBoxColumn.Type" xml:space="preserve">
+    <value>System.Windows.Forms.DataGridViewTextBoxColumn, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="$this.ClientSize" type="System.Drawing.Size, System.Drawing">
+    <value>800, 445</value>
+  </data>
+  <data name="_btnSearch.Size" type="System.Drawing.Size, System.Drawing">
+    <value>75, 23</value>
+  </data>
+  <data name="&gt;&gt;_txtBoxFatherName.ZOrder" xml:space="preserve">
+    <value>6</value>
+  </data>
+  <data name="&gt;&gt;_txtBoxFatherName.Name" xml:space="preserve">
+    <value>_txtBoxFatherName</value>
+  </data>
+  <data name="&gt;&gt;provinceDataGridViewTextBoxColumn.Name" xml:space="preserve">
+    <value>provinceDataGridViewTextBoxColumn</value>
+  </data>
+  <data name="&gt;&gt;_txtBoxFirstName.Type" xml:space="preserve">
+    <value>System.Windows.Forms.TextBox, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="_lblLastName.Size" type="System.Drawing.Size, System.Drawing">
+    <value>57, 14</value>
+  </data>
+  <data name="&gt;&gt;_gbSearch.Parent" xml:space="preserve">
+    <value>$this</value>
+  </data>
+  <data name="registerPlaceDataGridViewTextBoxColumn.HeaderText" xml:space="preserve">
+    <value>مكان الولادة</value>
+  </data>
+  <data name="provinceDataGridViewTextBoxColumn.HeaderText" xml:space="preserve">
+    <value>Province</value>
+  </data>
+  <data name="&gt;&gt;registerNumberDataGridViewTextBoxColumn.Type" xml:space="preserve">
+    <value>System.Windows.Forms.DataGridViewTextBoxColumn, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;_dgSearchResult.Parent" xml:space="preserve">
+    <value>_gbSearchResult</value>
+  </data>
+  <data name="provinceDataGridViewTextBoxColumn.Visible" type="System.Boolean, mscorlib">
+    <value>False</value>
+  </data>
+  <data name="&gt;&gt;districtDataGridViewTextBoxColumn.Type" xml:space="preserve">
+    <value>System.Windows.Forms.DataGridViewTextBoxColumn, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;districtDataGridViewTextBoxColumn.Name" xml:space="preserve">
+    <value>districtDataGridViewTextBoxColumn</value>
+  </data>
+  <data name="&gt;&gt;_btnSearch.ZOrder" xml:space="preserve">
+    <value>1</value>
+  </data>
+  <metadata name="citizenBindingSource.TrayLocation" type="System.Drawing.Point, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a">
+    <value>17, 17</value>
+  </metadata>
+</root>
