@@ -42,6 +42,11 @@
             this._txtBoxFirstName = new System.Windows.Forms.TextBox();
             this._gbSearchResult = new System.Windows.Forms.GroupBox();
             this._dgSearchResult = new System.Windows.Forms.DataGridView();
+            this.citizenBindingSource = new System.Windows.Forms.BindingSource(this.components);
+            this.label1 = new System.Windows.Forms.Label();
+            this.cmbDistrictToSearch = new System.Windows.Forms.ComboBox();
+            this.cmbRegisterPlaceToSearch = new System.Windows.Forms.ComboBox();
+            this.label2 = new System.Windows.Forms.Label();
             this.idDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.firstNameDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.fatherNameDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
@@ -49,13 +54,7 @@
             this.fullNameDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.motherFullNameDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.dateOfBirthDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.provinceDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.districtDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.registerPlaceDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.registerNumberDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.religionDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.religionSectDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.citizenBindingSource = new System.Windows.Forms.BindingSource(this.components);
             this._gbSearch.SuspendLayout();
             this._gbSearchResult.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this._dgSearchResult)).BeginInit();
@@ -65,6 +64,10 @@
             // _gbSearch
             // 
             this._gbSearch.BackColor = System.Drawing.SystemColors.ActiveCaption;
+            this._gbSearch.Controls.Add(this.cmbRegisterPlaceToSearch);
+            this._gbSearch.Controls.Add(this.label2);
+            this._gbSearch.Controls.Add(this.cmbDistrictToSearch);
+            this._gbSearch.Controls.Add(this.label1);
             this._gbSearch.Controls.Add(this._btnClear);
             this._gbSearch.Controls.Add(this._btnSearch);
             this._gbSearch.Controls.Add(this._lblLastName);
@@ -75,7 +78,7 @@
             this._gbSearch.Controls.Add(this._txtBoxFirstName);
             this._gbSearch.Location = new System.Drawing.Point(12, 12);
             this._gbSearch.Name = "_gbSearch";
-            this._gbSearch.Size = new System.Drawing.Size(776, 83);
+            this._gbSearch.Size = new System.Drawing.Size(776, 114);
             this._gbSearch.TabIndex = 0;
             this._gbSearch.TabStop = false;
             // 
@@ -86,7 +89,7 @@
             this._btnClear.Location = new System.Drawing.Point(6, 46);
             this._btnClear.Name = "_btnClear";
             this._btnClear.Size = new System.Drawing.Size(75, 23);
-            this._btnClear.TabIndex = 7;
+            this._btnClear.TabIndex = 11;
             this._btnClear.Text = "مسح";
             this._btnClear.UseVisualStyleBackColor = true;
             // 
@@ -97,7 +100,7 @@
             this._btnSearch.Location = new System.Drawing.Point(83, 46);
             this._btnSearch.Name = "_btnSearch";
             this._btnSearch.Size = new System.Drawing.Size(75, 23);
-            this._btnSearch.TabIndex = 6;
+            this._btnSearch.TabIndex = 10;
             this._btnSearch.Text = "بحث";
             this._btnSearch.UseVisualStyleBackColor = true;
             this._btnSearch.Click += new System.EventHandler(this._btnSearch_Click);
@@ -107,10 +110,10 @@
             this._lblLastName.AutoSize = true;
             this._lblLastName.Font = new System.Drawing.Font("Tahoma", 9F, System.Drawing.FontStyle.Bold);
             this._lblLastName.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(0)))), ((int)(((byte)(64)))));
-            this._lblLastName.Location = new System.Drawing.Point(308, 27);
+            this._lblLastName.Location = new System.Drawing.Point(308, 57);
             this._lblLastName.Name = "_lblLastName";
             this._lblLastName.Size = new System.Drawing.Size(57, 14);
-            this._lblLastName.TabIndex = 5;
+            this._lblLastName.TabIndex = 8;
             this._lblLastName.Text = "الشهرة :";
             // 
             // _lblFatherName
@@ -118,10 +121,10 @@
             this._lblFatherName.AutoSize = true;
             this._lblFatherName.Font = new System.Drawing.Font("Tahoma", 9F, System.Drawing.FontStyle.Bold);
             this._lblFatherName.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(0)))), ((int)(((byte)(64)))));
-            this._lblFatherName.Location = new System.Drawing.Point(501, 27);
+            this._lblFatherName.Location = new System.Drawing.Point(501, 57);
             this._lblFatherName.Name = "_lblFatherName";
             this._lblFatherName.Size = new System.Drawing.Size(68, 14);
-            this._lblFatherName.TabIndex = 4;
+            this._lblFatherName.TabIndex = 6;
             this._lblFatherName.Text = "اسم الاب :";
             // 
             // _lblFirstName
@@ -129,43 +132,43 @@
             this._lblFirstName.AutoSize = true;
             this._lblFirstName.Font = new System.Drawing.Font("Tahoma", 9F, System.Drawing.FontStyle.Bold);
             this._lblFirstName.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(0)))), ((int)(((byte)(64)))));
-            this._lblFirstName.Location = new System.Drawing.Point(721, 27);
+            this._lblFirstName.Location = new System.Drawing.Point(721, 57);
             this._lblFirstName.Name = "_lblFirstName";
             this._lblFirstName.Size = new System.Drawing.Size(49, 14);
-            this._lblFirstName.TabIndex = 3;
+            this._lblFirstName.TabIndex = 4;
             this._lblFirstName.Text = "الاسم :";
             // 
             // _txtBoxLastName
             // 
             this._txtBoxLastName.BackColor = System.Drawing.SystemColors.InactiveCaption;
             this._txtBoxLastName.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(0)))), ((int)(((byte)(64)))));
-            this._txtBoxLastName.Location = new System.Drawing.Point(164, 48);
+            this._txtBoxLastName.Location = new System.Drawing.Point(164, 78);
             this._txtBoxLastName.Name = "_txtBoxLastName";
             this._txtBoxLastName.Size = new System.Drawing.Size(198, 20);
-            this._txtBoxLastName.TabIndex = 2;
+            this._txtBoxLastName.TabIndex = 9;
             // 
             // _txtBoxFatherName
             // 
             this._txtBoxFatherName.BackColor = System.Drawing.SystemColors.InactiveCaption;
             this._txtBoxFatherName.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(0)))), ((int)(((byte)(64)))));
-            this._txtBoxFatherName.Location = new System.Drawing.Point(368, 48);
+            this._txtBoxFatherName.Location = new System.Drawing.Point(368, 78);
             this._txtBoxFatherName.Name = "_txtBoxFatherName";
             this._txtBoxFatherName.Size = new System.Drawing.Size(198, 20);
-            this._txtBoxFatherName.TabIndex = 1;
+            this._txtBoxFatherName.TabIndex = 7;
             // 
             // _txtBoxFirstName
             // 
             this._txtBoxFirstName.BackColor = System.Drawing.SystemColors.InactiveCaption;
             this._txtBoxFirstName.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(0)))), ((int)(((byte)(64)))));
-            this._txtBoxFirstName.Location = new System.Drawing.Point(572, 48);
+            this._txtBoxFirstName.Location = new System.Drawing.Point(572, 78);
             this._txtBoxFirstName.Name = "_txtBoxFirstName";
             this._txtBoxFirstName.Size = new System.Drawing.Size(198, 20);
-            this._txtBoxFirstName.TabIndex = 0;
+            this._txtBoxFirstName.TabIndex = 5;
             // 
             // _gbSearchResult
             // 
             this._gbSearchResult.Controls.Add(this._dgSearchResult);
-            this._gbSearchResult.Location = new System.Drawing.Point(12, 101);
+            this._gbSearchResult.Location = new System.Drawing.Point(12, 132);
             this._gbSearchResult.Name = "_gbSearchResult";
             this._gbSearchResult.Size = new System.Drawing.Size(776, 337);
             this._gbSearchResult.TabIndex = 1;
@@ -196,12 +199,7 @@
             this.fullNameDataGridViewTextBoxColumn,
             this.motherFullNameDataGridViewTextBoxColumn,
             this.dateOfBirthDataGridViewTextBoxColumn,
-            this.provinceDataGridViewTextBoxColumn,
-            this.districtDataGridViewTextBoxColumn,
-            this.registerPlaceDataGridViewTextBoxColumn,
-            this.registerNumberDataGridViewTextBoxColumn,
-            this.religionDataGridViewTextBoxColumn,
-            this.religionSectDataGridViewTextBoxColumn});
+            this.registerNumberDataGridViewTextBoxColumn});
             this._dgSearchResult.DataSource = this.citizenBindingSource;
             this._dgSearchResult.EditMode = System.Windows.Forms.DataGridViewEditMode.EditProgrammatically;
             this._dgSearchResult.GridColor = System.Drawing.SystemColors.ControlLight;
@@ -215,12 +213,57 @@
             this._dgSearchResult.TabIndex = 0;
             this._dgSearchResult.DoubleClick += new System.EventHandler(this._dgSearchResult_DoubleClick);
             // 
+            // citizenBindingSource
+            // 
+            this.citizenBindingSource.DataSource = typeof(FM.Models.Citizen);
+            // 
+            // label1
+            // 
+            this.label1.AutoSize = true;
+            this.label1.Font = new System.Drawing.Font("Tahoma", 9F, System.Drawing.FontStyle.Bold);
+            this.label1.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(0)))), ((int)(((byte)(64)))));
+            this.label1.Location = new System.Drawing.Point(719, 16);
+            this.label1.Name = "label1";
+            this.label1.Size = new System.Drawing.Size(51, 14);
+            this.label1.TabIndex = 0;
+            this.label1.Text = "القضاء :";
+            // 
+            // cmbDistrictToSearch
+            // 
+            this.cmbDistrictToSearch.BackColor = System.Drawing.SystemColors.InactiveCaption;
+            this.cmbDistrictToSearch.FormattingEnabled = true;
+            this.cmbDistrictToSearch.Location = new System.Drawing.Point(572, 33);
+            this.cmbDistrictToSearch.Name = "cmbDistrictToSearch";
+            this.cmbDistrictToSearch.Size = new System.Drawing.Size(198, 21);
+            this.cmbDistrictToSearch.TabIndex = 1;
+            // 
+            // cmbRegisterPlaceToSearch
+            // 
+            this.cmbRegisterPlaceToSearch.BackColor = System.Drawing.SystemColors.InactiveCaption;
+            this.cmbRegisterPlaceToSearch.FormattingEnabled = true;
+            this.cmbRegisterPlaceToSearch.Location = new System.Drawing.Point(368, 33);
+            this.cmbRegisterPlaceToSearch.Name = "cmbRegisterPlaceToSearch";
+            this.cmbRegisterPlaceToSearch.Size = new System.Drawing.Size(198, 21);
+            this.cmbRegisterPlaceToSearch.TabIndex = 3;
+            // 
+            // label2
+            // 
+            this.label2.AutoSize = true;
+            this.label2.Font = new System.Drawing.Font("Tahoma", 9F, System.Drawing.FontStyle.Bold);
+            this.label2.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(0)))), ((int)(((byte)(64)))));
+            this.label2.Location = new System.Drawing.Point(486, 16);
+            this.label2.Name = "label2";
+            this.label2.Size = new System.Drawing.Size(83, 14);
+            this.label2.TabIndex = 2;
+            this.label2.Text = "مكان السجل:";
+            // 
             // idDataGridViewTextBoxColumn
             // 
             this.idDataGridViewTextBoxColumn.DataPropertyName = "Id";
             this.idDataGridViewTextBoxColumn.HeaderText = "رقم";
             this.idDataGridViewTextBoxColumn.Name = "idDataGridViewTextBoxColumn";
             this.idDataGridViewTextBoxColumn.ReadOnly = true;
+            this.idDataGridViewTextBoxColumn.Visible = false;
             this.idDataGridViewTextBoxColumn.Width = 106;
             // 
             // firstNameDataGridViewTextBoxColumn
@@ -258,42 +301,16 @@
             // motherFullNameDataGridViewTextBoxColumn
             // 
             this.motherFullNameDataGridViewTextBoxColumn.DataPropertyName = "MotherFullName";
-            this.motherFullNameDataGridViewTextBoxColumn.HeaderText = "MotherFullName";
+            this.motherFullNameDataGridViewTextBoxColumn.HeaderText = "اسم الام";
             this.motherFullNameDataGridViewTextBoxColumn.Name = "motherFullNameDataGridViewTextBoxColumn";
             this.motherFullNameDataGridViewTextBoxColumn.ReadOnly = true;
-            this.motherFullNameDataGridViewTextBoxColumn.Visible = false;
             // 
             // dateOfBirthDataGridViewTextBoxColumn
             // 
             this.dateOfBirthDataGridViewTextBoxColumn.DataPropertyName = "DateOfBirth";
-            this.dateOfBirthDataGridViewTextBoxColumn.HeaderText = "DateOfBirth";
+            this.dateOfBirthDataGridViewTextBoxColumn.HeaderText = "تاريخ الولادة";
             this.dateOfBirthDataGridViewTextBoxColumn.Name = "dateOfBirthDataGridViewTextBoxColumn";
             this.dateOfBirthDataGridViewTextBoxColumn.ReadOnly = true;
-            this.dateOfBirthDataGridViewTextBoxColumn.Visible = false;
-            // 
-            // provinceDataGridViewTextBoxColumn
-            // 
-            this.provinceDataGridViewTextBoxColumn.DataPropertyName = "Province";
-            this.provinceDataGridViewTextBoxColumn.HeaderText = "Province";
-            this.provinceDataGridViewTextBoxColumn.Name = "provinceDataGridViewTextBoxColumn";
-            this.provinceDataGridViewTextBoxColumn.ReadOnly = true;
-            this.provinceDataGridViewTextBoxColumn.Visible = false;
-            // 
-            // districtDataGridViewTextBoxColumn
-            // 
-            this.districtDataGridViewTextBoxColumn.DataPropertyName = "District";
-            this.districtDataGridViewTextBoxColumn.HeaderText = "District";
-            this.districtDataGridViewTextBoxColumn.Name = "districtDataGridViewTextBoxColumn";
-            this.districtDataGridViewTextBoxColumn.ReadOnly = true;
-            this.districtDataGridViewTextBoxColumn.Visible = false;
-            // 
-            // registerPlaceDataGridViewTextBoxColumn
-            // 
-            this.registerPlaceDataGridViewTextBoxColumn.DataPropertyName = "RegisterPlace";
-            this.registerPlaceDataGridViewTextBoxColumn.HeaderText = "مكان الولادة";
-            this.registerPlaceDataGridViewTextBoxColumn.Name = "registerPlaceDataGridViewTextBoxColumn";
-            this.registerPlaceDataGridViewTextBoxColumn.ReadOnly = true;
-            this.registerPlaceDataGridViewTextBoxColumn.Width = 106;
             // 
             // registerNumberDataGridViewTextBoxColumn
             // 
@@ -303,31 +320,11 @@
             this.registerNumberDataGridViewTextBoxColumn.ReadOnly = true;
             this.registerNumberDataGridViewTextBoxColumn.Width = 106;
             // 
-            // religionDataGridViewTextBoxColumn
-            // 
-            this.religionDataGridViewTextBoxColumn.DataPropertyName = "Religion";
-            this.religionDataGridViewTextBoxColumn.HeaderText = "Religion";
-            this.religionDataGridViewTextBoxColumn.Name = "religionDataGridViewTextBoxColumn";
-            this.religionDataGridViewTextBoxColumn.ReadOnly = true;
-            this.religionDataGridViewTextBoxColumn.Visible = false;
-            // 
-            // religionSectDataGridViewTextBoxColumn
-            // 
-            this.religionSectDataGridViewTextBoxColumn.DataPropertyName = "ReligionSect";
-            this.religionSectDataGridViewTextBoxColumn.HeaderText = "ReligionSect";
-            this.religionSectDataGridViewTextBoxColumn.Name = "religionSectDataGridViewTextBoxColumn";
-            this.religionSectDataGridViewTextBoxColumn.ReadOnly = true;
-            this.religionSectDataGridViewTextBoxColumn.Visible = false;
-            // 
-            // citizenBindingSource
-            // 
-            this.citizenBindingSource.DataSource = typeof(FM.Models.Citizen);
-            // 
             // frmSearch
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(800, 445);
+            this.ClientSize = new System.Drawing.Size(800, 481);
             this.Controls.Add(this._gbSearchResult);
             this.Controls.Add(this._gbSearch);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedDialog;
@@ -361,6 +358,15 @@
         private System.Windows.Forms.Button _btnSearch;
         private System.Windows.Forms.DataGridView _dgSearchResult;
         private System.Windows.Forms.BindingSource citizenBindingSource;
+        private System.Windows.Forms.DataGridViewTextBoxColumn provinceDataGridViewTextBoxColumn;
+        private System.Windows.Forms.DataGridViewTextBoxColumn districtDataGridViewTextBoxColumn;
+        private System.Windows.Forms.DataGridViewTextBoxColumn registerPlaceDataGridViewTextBoxColumn;
+        private System.Windows.Forms.DataGridViewTextBoxColumn religionDataGridViewTextBoxColumn;
+        private System.Windows.Forms.DataGridViewTextBoxColumn religionSectDataGridViewTextBoxColumn;
+        private System.Windows.Forms.ComboBox cmbRegisterPlaceToSearch;
+        private System.Windows.Forms.Label label2;
+        private System.Windows.Forms.ComboBox cmbDistrictToSearch;
+        private System.Windows.Forms.Label label1;
         private System.Windows.Forms.DataGridViewTextBoxColumn idDataGridViewTextBoxColumn;
         private System.Windows.Forms.DataGridViewTextBoxColumn firstNameDataGridViewTextBoxColumn;
         private System.Windows.Forms.DataGridViewTextBoxColumn fatherNameDataGridViewTextBoxColumn;
@@ -368,11 +374,6 @@
         private System.Windows.Forms.DataGridViewTextBoxColumn fullNameDataGridViewTextBoxColumn;
         private System.Windows.Forms.DataGridViewTextBoxColumn motherFullNameDataGridViewTextBoxColumn;
         private System.Windows.Forms.DataGridViewTextBoxColumn dateOfBirthDataGridViewTextBoxColumn;
-        private System.Windows.Forms.DataGridViewTextBoxColumn provinceDataGridViewTextBoxColumn;
-        private System.Windows.Forms.DataGridViewTextBoxColumn districtDataGridViewTextBoxColumn;
-        private System.Windows.Forms.DataGridViewTextBoxColumn registerPlaceDataGridViewTextBoxColumn;
         private System.Windows.Forms.DataGridViewTextBoxColumn registerNumberDataGridViewTextBoxColumn;
-        private System.Windows.Forms.DataGridViewTextBoxColumn religionDataGridViewTextBoxColumn;
-        private System.Windows.Forms.DataGridViewTextBoxColumn religionSectDataGridViewTextBoxColumn;
     }
 }

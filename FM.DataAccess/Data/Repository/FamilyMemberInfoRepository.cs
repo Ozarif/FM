@@ -17,7 +17,7 @@ namespace FM.DataAccess.Data.Repository
         }
         public void Update(FamilyMemberInfo familyMemberInfo)
         {
-            var objFromDb = _db.FamilyMemberInfos.FirstOrDefault(i => i.Id == familyMemberInfo.Id);
+            var objFromDb = _db.FamilyMemberInfo.FirstOrDefault(i => i.Id == familyMemberInfo.Id);
 
             objFromDb.CitizenId = familyMemberInfo.CitizenId;
             objFromDb.Name = familyMemberInfo.Name;

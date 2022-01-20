@@ -5,11 +5,10 @@ namespace FM.DataAccess.Data
 {
    public class fmDBContext :DbContext
     {
-
-
         public DbSet<Province> Provinces { get; set; }
         public DbSet<District> Districts { get; set; }
         public DbSet<City> Cities { get; set; }
+        public DbSet<RegisterPlace> RegisterPlaces { get; set; }
         public DbSet<BusinessSector> BusinessSectors { get; set; }
         public DbSet<EducationalLevel> EducationalLevels { get; set; }
         public DbSet<ElectionRole> ElectionRoles { get; set; }
@@ -21,9 +20,12 @@ namespace FM.DataAccess.Data
         public DbSet<ResultType> ResultTypes { get; set; }
         public DbSet<ServiceType> ServiceTypes { get; set; }
         public DbSet<Citizen> Citizens { get; set; }
-        public DbSet<CitizenDetailInfo> CitizenDetailInfos { get; set; }
-        public DbSet<FamilyMemberInfo> FamilyMemberInfos { get; set; }
-        public DbSet<ReferenceInfo> ReferenceInfos { get; set; }
-        public DbSet<ServiceInfo> ServiceInfos { get; set; }
+        public DbSet<CitizenDetailInfo> CitizenDetailInfo { get; set; }
+        public DbSet<FamilyMemberInfo> FamilyMemberInfo { get; set; }
+        public DbSet<ReferenceInfo> ReferenceInfo { get; set; }
+        public DbSet<ServiceInfo> ServiceInfo { get; set; }
+        public DbSet<ReligionSection> ReligionSections { get; set; }
+        public DbSet<Gender> Genders { get; set; }
+
     }
 }

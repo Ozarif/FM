@@ -57,6 +57,7 @@
             this.toolStripSeparator7 = new System.Windows.Forms.ToolStripSeparator();
             this._tsmiCitizensServices = new System.Windows.Forms.ToolStripMenuItem();
             this._tsmiExit = new System.Windows.Forms.ToolStripMenuItem();
+            this.toolStripSeparator10 = new System.Windows.Forms.ToolStripSeparator();
             this._ssMain.SuspendLayout();
             this._msMain.SuspendLayout();
             this.SuspendLayout();
@@ -120,44 +121,44 @@
             this.toolStripSeparator9,
             this._tsmiSetupGeneralBusinessSectors});
             this._tsmiSetupGeneral.Name = "_tsmiSetupGeneral";
-            this._tsmiSetupGeneral.Size = new System.Drawing.Size(157, 22);
+            this._tsmiSetupGeneral.Size = new System.Drawing.Size(180, 22);
             this._tsmiSetupGeneral.Text = "اعدادات عامة";
             // 
             // _tsmiSetupGeneralHomeTypes
             // 
             this._tsmiSetupGeneralHomeTypes.Name = "_tsmiSetupGeneralHomeTypes";
-            this._tsmiSetupGeneralHomeTypes.Size = new System.Drawing.Size(154, 22);
+            this._tsmiSetupGeneralHomeTypes.Size = new System.Drawing.Size(180, 22);
             this._tsmiSetupGeneralHomeTypes.Text = "انواع السكن";
             this._tsmiSetupGeneralHomeTypes.Click += new System.EventHandler(this._tsmiSetupGeneralHomeTypes_Click);
             // 
             // toolStripSeparator8
             // 
             this.toolStripSeparator8.Name = "toolStripSeparator8";
-            this.toolStripSeparator8.Size = new System.Drawing.Size(151, 6);
+            this.toolStripSeparator8.Size = new System.Drawing.Size(177, 6);
             // 
             // _tsmiSetupGeneralEducationalLevels
             // 
             this._tsmiSetupGeneralEducationalLevels.Name = "_tsmiSetupGeneralEducationalLevels";
-            this._tsmiSetupGeneralEducationalLevels.Size = new System.Drawing.Size(154, 22);
+            this._tsmiSetupGeneralEducationalLevels.Size = new System.Drawing.Size(180, 22);
             this._tsmiSetupGeneralEducationalLevels.Text = "التحصيل العلمي";
             this._tsmiSetupGeneralEducationalLevels.Click += new System.EventHandler(this._tsmiSetupGeneralEducationalLevels_Click);
             // 
             // toolStripSeparator9
             // 
             this.toolStripSeparator9.Name = "toolStripSeparator9";
-            this.toolStripSeparator9.Size = new System.Drawing.Size(151, 6);
+            this.toolStripSeparator9.Size = new System.Drawing.Size(177, 6);
             // 
             // _tsmiSetupGeneralBusinessSectors
             // 
             this._tsmiSetupGeneralBusinessSectors.Name = "_tsmiSetupGeneralBusinessSectors";
-            this._tsmiSetupGeneralBusinessSectors.Size = new System.Drawing.Size(154, 22);
+            this._tsmiSetupGeneralBusinessSectors.Size = new System.Drawing.Size(180, 22);
             this._tsmiSetupGeneralBusinessSectors.Text = "قطاع العمل";
             this._tsmiSetupGeneralBusinessSectors.Click += new System.EventHandler(this._tsmiSetupGeneralBusinessSectors_Click);
             // 
             // toolStripSeparator1
             // 
             this.toolStripSeparator1.Name = "toolStripSeparator1";
-            this.toolStripSeparator1.Size = new System.Drawing.Size(154, 6);
+            this.toolStripSeparator1.Size = new System.Drawing.Size(177, 6);
             // 
             // _tsmiSetupParty
             // 
@@ -168,7 +169,7 @@
             this.toolStripSeparator4,
             this._tsmiSetupPartyElectionRoles});
             this._tsmiSetupParty.Name = "_tsmiSetupParty";
-            this._tsmiSetupParty.Size = new System.Drawing.Size(157, 22);
+            this._tsmiSetupParty.Size = new System.Drawing.Size(180, 22);
             this._tsmiSetupParty.Text = "اعدادات التيار";
             // 
             // _tsmiSetupPartyDivisions
@@ -205,7 +206,7 @@
             // toolStripSeparator2
             // 
             this.toolStripSeparator2.Name = "toolStripSeparator2";
-            this.toolStripSeparator2.Size = new System.Drawing.Size(154, 6);
+            this.toolStripSeparator2.Size = new System.Drawing.Size(177, 6);
             // 
             // _tsmiSetupServices
             // 
@@ -214,7 +215,7 @@
             this.toolStripSeparator5,
             this._tsmiSetupServicesResults});
             this._tsmiSetupServices.Name = "_tsmiSetupServices";
-            this._tsmiSetupServices.Size = new System.Drawing.Size(157, 22);
+            this._tsmiSetupServices.Size = new System.Drawing.Size(180, 22);
             this._tsmiSetupServices.Text = "اعدادات الخدمات";
             // 
             // _tsmiSetupServicesTypes
@@ -287,6 +288,11 @@
             this._tsmiExit.Text = "خروج";
             this._tsmiExit.Click += new System.EventHandler(this._tsmiExit_Click);
             // 
+            // toolStripSeparator10
+            // 
+            this.toolStripSeparator10.Name = "toolStripSeparator10";
+            this.toolStripSeparator10.Size = new System.Drawing.Size(186, 6);
+            // 
             // frmMain
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(7F, 14F);
@@ -345,5 +351,6 @@
         private System.Windows.Forms.ToolStripSeparator toolStripSeparator7;
         private System.Windows.Forms.ToolStripMenuItem _tsmiCitizensServices;
         private System.Windows.Forms.ToolStripMenuItem _tsmiExit;
+        private System.Windows.Forms.ToolStripSeparator toolStripSeparator10;
     }
 }

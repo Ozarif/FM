@@ -1,6 +1,7 @@
 ﻿using System;
 using System.Collections.Generic;
 using System.ComponentModel.DataAnnotations;
+using System.ComponentModel.DataAnnotations.Schema;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
@@ -37,28 +38,33 @@ namespace FM.Models
 
         [Required]
         public DateTime DateOfBirth { get; set; }
-        [Required]
-        [MaxLength(100)]
-        public string Province { get; set; }
+
+        ////////////////////////////////////////////////////////////////////
 
         [Required]
-        [MaxLength(100)]
-        public string District { get; set; }
+        public int ProvinceID{ get; set; }
 
         [Required]
-        [MaxLength(100)]
-        public string RegisterPlace { get; set; }
+        public int DistrictID { get; set; }
+
+        [Required]
+        public int RegisterPlaceID { get; set; }
+
+        ////////////////////////////////////////////////////////////////////
 
         [Required]
         public int RegisterNumber { get; set; }
 
-        [Required]
-        [MaxLength(100)]
-        public string Religion { get; set; }
+        public int PersonalReligionSectionID { get; set; }
+
+
+        public int RegisterReligionSectionID { get; set; }
+
 
         [Required]
-        [MaxLength(100)]
-        public string ReligionSect { get; set; }
+        public int GenderID { get; set; }
+
+       public Gender Gender { get; set; }
 
     }
 }

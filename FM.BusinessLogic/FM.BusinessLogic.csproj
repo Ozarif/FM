@@ -50,6 +50,7 @@
     <Compile Include="EducationalLevelBL.cs" />
     <Compile Include="ElectionRoleBL.cs" />
     <Compile Include="FamilyMemberInfoBL.cs" />
+    <Compile Include="GenderBL.cs" />
     <Compile Include="HomeTypeBL.cs" />
     <Compile Include="MaritalStatusBL.cs" />
     <Compile Include="MemberRelationTypeBL.cs" />
@@ -58,6 +59,8 @@
     <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="ProvinceBL.cs" />
     <Compile Include="ReferenceInfoBL.cs" />
+    <Compile Include="RegisterPlaceBL.cs" />
+    <Compile Include="ReligionSectionBL.cs" />
     <Compile Include="ResultTypeBL.cs" />
     <Compile Include="ServiceInfoBL.cs" />
     <Compile Include="ServiceTypeBL.cs" />

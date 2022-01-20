@@ -3,7 +3,7 @@
     using System;
     using System.Data.Entity.Migrations;
     
-    public partial class InitialDatabase : DbMigration
+    public partial class ChangesToModels : DbMigration
     {
         public override void Up()
         {
@@ -53,8 +53,9 @@
                 "dbo.CitizenDetailInfoes",
                 c => new
                     {
-                        CitizenId = c.Int(nullable: false),
-                        Sex = c.String(nullable: false, maxLength: 100),
+                        CitizenId = c.Int(nullable: false, identity: true),
+                        ProvinceId = c.Int(nullable: false),
+                        DistrictId = c.Int(nullable: false),
                         CityId = c.Int(nullable: false),
                         Street = c.String(maxLength: 100),
                         Building = c.String(maxLength: 100),
@@ -74,16 +75,12 @@
                     })
                 .PrimaryKey(t => t.CitizenId)
                 .ForeignKey("dbo.BusinessSectors", t => t.BusinessSectorId, cascadeDelete: true)
-                .ForeignKey("dbo.Citizens", t => t.CitizenId)
-                .ForeignKey("dbo.Cities", t => t.CityId, cascadeDelete: true)
                 .ForeignKey("dbo.EducationalLevels", t => t.EducationalLevelId, cascadeDelete: true)
                 .ForeignKey("dbo.ElectionRoles", t => t.ElectionRoleId, cascadeDelete: true)
                 .ForeignKey("dbo.HomeTypes", t => t.HomeTypeId, cascadeDelete: true)
                 .ForeignKey("dbo.MaritalStatus", t => t.MaritalStatusId, cascadeDelete: true)
                 .ForeignKey("dbo.PartyDivisions", t => t.PartyDivisionId, cascadeDelete: true)
                 .ForeignKey("dbo.PartyPositions", t => t.PartyPositionId, cascadeDelete: true)
-                .Index(t => t.CitizenId)
-                .Index(t => t.CityId)
                 .Index(t => t.HomeTypeId)
                 .Index(t => t.MaritalStatusId)
                 .Index(t => t.EducationalLevelId)
@@ -91,25 +88,6 @@
                 .Index(t => t.PartyDivisionId)
                 .Index(t => t.PartyPositionId)
                 .Index(t => t.ElectionRoleId);
-            
-            CreateTable(
-                "dbo.Citizens",
-                c => new
-                    {
-                        Id = c.Int(nullable: false, identity: true),
-                        FirstName = c.String(nullable: false, maxLength: 100),
-                        FatherName = c.String(nullable: false, maxLength: 100),
-                        LastName = c.String(nullable: false, maxLength: 100),
-                        MotherFullName = c.String(nullable: false, maxLength: 150),
-                        DateOfBirth = c.DateTime(nullable: false),
-                        Province = c.String(nullable: false, maxLength: 100),
-                        District = c.String(nullable: false, maxLength: 100),
-                        RegisterPlace = c.String(nullable: false, maxLength: 100),
-                        RegisterNumber = c.Int(nullable: false),
-                        Religion = c.String(nullable: false),
-                        ReligionSect = c.String(nullable: false),
-                    })
-                .PrimaryKey(t => t.Id);
             
             CreateTable(
                 "dbo.EducationalLevels",
@@ -166,13 +144,44 @@
                 .PrimaryKey(t => t.Id);
             
             CreateTable(
+                "dbo.Citizens",
+                c => new
+                    {
+                        Id = c.Int(nullable: false, identity: true),
+                        FirstName = c.String(nullable: false, maxLength: 100),
+                        FatherName = c.String(nullable: false, maxLength: 100),
+                        LastName = c.String(nullable: false, maxLength: 100),
+                        MotherFullName = c.String(nullable: false, maxLength: 150),
+                        DateOfBirth = c.DateTime(nullable: false),
+                        ProvinceID = c.Int(nullable: false),
+                        DistrictID = c.Int(nullable: false),
+                        RegisterPlaceID = c.Int(nullable: false),
+                        RegisterNumber = c.Int(nullable: false),
+                        PersonalReligionSectionID = c.Int(nullable: false),
+                        RegisterReligionSectionID = c.Int(nullable: false),
+                        GenderID = c.Int(nullable: false),
+                    })
+                .PrimaryKey(t => t.Id)
+                .ForeignKey("dbo.Genders", t => t.GenderID, cascadeDelete: true)
+                .Index(t => t.GenderID);
+            
+            CreateTable(
+                "dbo.Genders",
+                c => new
+                    {
+                        Id = c.Int(nullable: false, identity: true),
+                        Name = c.String(nullable: false, maxLength: 150),
+                    })
+                .PrimaryKey(t => t.Id);
+            
+            CreateTable(
                 "dbo.FamilyMemberInfoes",
                 c => new
                     {
                         Id = c.Int(nullable: false, identity: true),
                         CitizenId = c.Int(nullable: false),
                         Name = c.String(nullable: false, maxLength: 100),
-                        Sex = c.String(nullable: false),
+                        Sex = c.Int(nullable: false),
                         MemberRelationTypeId = c.Int(nullable: false),
                         DateOfBirth = c.DateTime(nullable: false),
                     })
@@ -204,6 +213,27 @@
                 .Index(t => t.PartyPositionId);
             
             CreateTable(
+                "dbo.RegisterPlaces",
+                c => new
+                    {
+                        Id = c.Int(nullable: false, identity: true),
+                        Name = c.String(nullable: false, maxLength: 100),
+                        DistrictId = c.Int(nullable: false),
+                    })
+                .PrimaryKey(t => t.Id)
+                .ForeignKey("dbo.Districts", t => t.DistrictId, cascadeDelete: true)
+                .Index(t => t.DistrictId);
+            
+            CreateTable(
+                "dbo.ReligionSections",
+                c => new
+                    {
+                        Id = c.Int(nullable: false, identity: true),
+                        Name = c.String(nullable: false, maxLength: 200),
+                    })
+                .PrimaryKey(t => t.Id);
+            
+            CreateTable(
                 "dbo.ResultTypes",
                 c => new
                     {
@@ -220,7 +250,7 @@
                         CitizenId = c.Int(nullable: false),
                         ServiceTypeId = c.Int(nullable: false),
                         ContactName = c.String(nullable: false, maxLength: 150),
-                        ContactNumber = c.String(nullable: false, maxLength: 50),
+                        ContactNumber = c.String(maxLength: 50),
                         ResultTypeId = c.Int(nullable: false),
                     })
                 .PrimaryKey(t => t.Id)
@@ -244,23 +274,25 @@
         {
             DropForeignKey("dbo.ServiceInfoes", "ServiceTypeId", "dbo.ServiceTypes");
             DropForeignKey("dbo.ServiceInfoes", "ResultTypeId", "dbo.ResultTypes");
+            DropForeignKey("dbo.RegisterPlaces", "DistrictId", "dbo.Districts");
             DropForeignKey("dbo.ReferenceInfoes", "PartyPositionId", "dbo.PartyPositions");
             DropForeignKey("dbo.FamilyMemberInfoes", "MemberRelationTypeId", "dbo.MemberRelationTypes");
+            DropForeignKey("dbo.Citizens", "GenderID", "dbo.Genders");
             DropForeignKey("dbo.CitizenDetailInfoes", "PartyPositionId", "dbo.PartyPositions");
             DropForeignKey("dbo.CitizenDetailInfoes", "PartyDivisionId", "dbo.PartyDivisions");
             DropForeignKey("dbo.CitizenDetailInfoes", "MaritalStatusId", "dbo.MaritalStatus");
             DropForeignKey("dbo.CitizenDetailInfoes", "HomeTypeId", "dbo.HomeTypes");
             DropForeignKey("dbo.CitizenDetailInfoes", "ElectionRoleId", "dbo.ElectionRoles");
             DropForeignKey("dbo.CitizenDetailInfoes", "EducationalLevelId", "dbo.EducationalLevels");
-            DropForeignKey("dbo.CitizenDetailInfoes", "CityId", "dbo.Cities");
-            DropForeignKey("dbo.CitizenDetailInfoes", "CitizenId", "dbo.Citizens");
             DropForeignKey("dbo.CitizenDetailInfoes", "BusinessSectorId", "dbo.BusinessSectors");
             DropForeignKey("dbo.Cities", "DistrictId", "dbo.Districts");
             DropForeignKey("dbo.Districts", "ProvinceId", "dbo.Provinces");
             DropIndex("dbo.ServiceInfoes", new[] { "ResultTypeId" });
             DropIndex("dbo.ServiceInfoes", new[] { "ServiceTypeId" });
+            DropIndex("dbo.RegisterPlaces", new[] { "DistrictId" });
             DropIndex("dbo.ReferenceInfoes", new[] { "PartyPositionId" });
             DropIndex("dbo.FamilyMemberInfoes", new[] { "MemberRelationTypeId" });
+            DropIndex("dbo.Citizens", new[] { "GenderID" });
             DropIndex("dbo.CitizenDetailInfoes", new[] { "ElectionRoleId" });
             DropIndex("dbo.CitizenDetailInfoes", new[] { "PartyPositionId" });
             DropIndex("dbo.CitizenDetailInfoes", new[] { "PartyDivisionId" });
@@ -268,23 +300,24 @@
             DropIndex("dbo.CitizenDetailInfoes", new[] { "EducationalLevelId" });
             DropIndex("dbo.CitizenDetailInfoes", new[] { "MaritalStatusId" });
             DropIndex("dbo.CitizenDetailInfoes", new[] { "HomeTypeId" });
-            DropIndex("dbo.CitizenDetailInfoes", new[] { "CityId" });
-            DropIndex("dbo.CitizenDetailInfoes", new[] { "CitizenId" });
             DropIndex("dbo.Districts", new[] { "ProvinceId" });
             DropIndex("dbo.Cities", new[] { "DistrictId" });
             DropTable("dbo.ServiceTypes");
             DropTable("dbo.ServiceInfoes");
             DropTable("dbo.ResultTypes");
+            DropTable("dbo.ReligionSections");
+            DropTable("dbo.RegisterPlaces");
             DropTable("dbo.ReferenceInfoes");
             DropTable("dbo.MemberRelationTypes");
             DropTable("dbo.FamilyMemberInfoes");
+            DropTable("dbo.Genders");
+            DropTable("dbo.Citizens");
             DropTable("dbo.PartyPositions");
             DropTable("dbo.PartyDivisions");
             DropTable("dbo.MaritalStatus");
             DropTable("dbo.HomeTypes");
             DropTable("dbo.ElectionRoles");
             DropTable("dbo.EducationalLevels");
-            DropTable("dbo.Citizens");
             DropTable("dbo.CitizenDetailInfoes");
             DropTable("dbo.Provinces");
             DropTable("dbo.Districts");

@@ -7,13 +7,13 @@ namespace FM.DataAccess.Migrations
     using System.Resources;
     
     [GeneratedCode("EntityFramework.Migrations", "6.4.4")]
-    public sealed partial class NewModifications : IMigrationMetadata
+    public sealed partial class ChangesToModels : IMigrationMetadata
     {
-        private readonly ResourceManager Resources = new ResourceManager(typeof(NewModifications));
+        private readonly ResourceManager Resources = new ResourceManager(typeof(ChangesToModels));
         
         string IMigrationMetadata.Id
         {
-            get { return "202107130859483_NewModifications"; }
+            get { return "202201191923184_ChangesToModels"; }
         }
         
         string IMigrationMetadata.Source

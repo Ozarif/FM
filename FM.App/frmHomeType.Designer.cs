@@ -44,13 +44,20 @@
             this.bindingNavigatorSeparator2 = new System.Windows.Forms.ToolStripSeparator();
             this._gbProvince = new System.Windows.Forms.GroupBox();
             this._txtBoxDescription = new System.Windows.Forms.TextBox();
+            this.homeTypeBindingSource = new System.Windows.Forms.BindingSource(this.components);
             this._lblDescription = new System.Windows.Forms.Label();
             this._txtBoxId = new System.Windows.Forms.TextBox();
             this._lblId = new System.Windows.Forms.Label();
             this._ssGeneral = new System.Windows.Forms.StatusStrip();
             this._bnGeneral = new System.Windows.Forms.BindingNavigator(this.components);
             this.bindingNavigatorSaveItem = new System.Windows.Forms.ToolStripButton();
+            this.toolStripSeparator1 = new System.Windows.Forms.ToolStripSeparator();
+            this._tscmbSearch = new System.Windows.Forms.ToolStripComboBox();
+            this._tcbtnSearch = new System.Windows.Forms.ToolStripButton();
+            this.toolStripSeparator2 = new System.Windows.Forms.ToolStripSeparator();
+            this._tsbtnExit = new System.Windows.Forms.ToolStripButton();
             this._gbProvince.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.homeTypeBindingSource)).BeginInit();
             this._ssGeneral.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this._bnGeneral)).BeginInit();
             this._bnGeneral.SuspendLayout();
@@ -63,7 +70,7 @@
             | System.Windows.Forms.ToolStripStatusLabelBorderSides.Bottom)));
             this._tssLblGeneral.BorderStyle = System.Windows.Forms.Border3DStyle.SunkenInner;
             this._tssLblGeneral.Name = "_tssLblGeneral";
-            this._tssLblGeneral.Size = new System.Drawing.Size(465, 17);
+            this._tssLblGeneral.Size = new System.Drawing.Size(469, 17);
             this._tssLblGeneral.Spring = true;
             this._tssLblGeneral.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
             // 
@@ -75,6 +82,7 @@
             this.bindingNavigatorAddNewItem.RightToLeftAutoMirrorImage = true;
             this.bindingNavigatorAddNewItem.Size = new System.Drawing.Size(23, 22);
             this.bindingNavigatorAddNewItem.Text = "Add new";
+            this.bindingNavigatorAddNewItem.ToolTipText = "اضافة";
             // 
             // bindingNavigatorCountItem
             // 
@@ -92,6 +100,7 @@
             this.bindingNavigatorDeleteItem.RightToLeftAutoMirrorImage = true;
             this.bindingNavigatorDeleteItem.Size = new System.Drawing.Size(23, 22);
             this.bindingNavigatorDeleteItem.Text = "Delete";
+            this.bindingNavigatorDeleteItem.ToolTipText = "حذف";
             // 
             // bindingNavigatorMoveFirstItem
             // 
@@ -101,6 +110,7 @@
             this.bindingNavigatorMoveFirstItem.RightToLeftAutoMirrorImage = true;
             this.bindingNavigatorMoveFirstItem.Size = new System.Drawing.Size(23, 22);
             this.bindingNavigatorMoveFirstItem.Text = "Move first";
+            this.bindingNavigatorMoveFirstItem.ToolTipText = "الاول";
             // 
             // bindingNavigatorMovePreviousItem
             // 
@@ -110,6 +120,7 @@
             this.bindingNavigatorMovePreviousItem.RightToLeftAutoMirrorImage = true;
             this.bindingNavigatorMovePreviousItem.Size = new System.Drawing.Size(23, 22);
             this.bindingNavigatorMovePreviousItem.Text = "Move previous";
+            this.bindingNavigatorMovePreviousItem.ToolTipText = "السابق";
             // 
             // bindingNavigatorSeparator
             // 
@@ -138,6 +149,7 @@
             this.bindingNavigatorMoveNextItem.RightToLeftAutoMirrorImage = true;
             this.bindingNavigatorMoveNextItem.Size = new System.Drawing.Size(23, 22);
             this.bindingNavigatorMoveNextItem.Text = "Move next";
+            this.bindingNavigatorMoveNextItem.ToolTipText = "التالي";
             // 
             // bindingNavigatorMoveLastItem
             // 
@@ -147,6 +159,7 @@
             this.bindingNavigatorMoveLastItem.RightToLeftAutoMirrorImage = true;
             this.bindingNavigatorMoveLastItem.Size = new System.Drawing.Size(23, 22);
             this.bindingNavigatorMoveLastItem.Text = "Move last";
+            this.bindingNavigatorMoveLastItem.ToolTipText = "الاخير";
             // 
             // bindingNavigatorSeparator2
             // 
@@ -168,10 +181,16 @@
             // _txtBoxDescription
             // 
             this._txtBoxDescription.BackColor = System.Drawing.SystemColors.InactiveCaption;
+            this._txtBoxDescription.DataBindings.Add(new System.Windows.Forms.Binding("Text", this.homeTypeBindingSource, "Discription", true));
             this._txtBoxDescription.Location = new System.Drawing.Point(6, 46);
             this._txtBoxDescription.Name = "_txtBoxDescription";
             this._txtBoxDescription.Size = new System.Drawing.Size(354, 20);
             this._txtBoxDescription.TabIndex = 3;
+            // 
+            // homeTypeBindingSource
+            // 
+            this.homeTypeBindingSource.DataSource = typeof(FM.Models.HomeType);
+            this.homeTypeBindingSource.ListChanged += new System.ComponentModel.ListChangedEventHandler(this.homeTypeBindingSource_ListChanged);
             // 
             // _lblDescription
             // 
@@ -187,6 +206,8 @@
             // _txtBoxId
             // 
             this._txtBoxId.BackColor = System.Drawing.SystemColors.InactiveCaption;
+            this._txtBoxId.DataBindings.Add(new System.Windows.Forms.Binding("Text", this.homeTypeBindingSource, "Id", true));
+            this._txtBoxId.Enabled = false;
             this._txtBoxId.Location = new System.Drawing.Point(252, 13);
             this._txtBoxId.Name = "_txtBoxId";
             this._txtBoxId.ReadOnly = true;
@@ -211,12 +232,13 @@
             this._ssGeneral.Location = new System.Drawing.Point(0, 114);
             this._ssGeneral.Name = "_ssGeneral";
             this._ssGeneral.RenderMode = System.Windows.Forms.ToolStripRenderMode.Professional;
-            this._ssGeneral.Size = new System.Drawing.Size(480, 22);
+            this._ssGeneral.Size = new System.Drawing.Size(484, 22);
             this._ssGeneral.TabIndex = 8;
             // 
             // _bnGeneral
             // 
             this._bnGeneral.AddNewItem = this.bindingNavigatorAddNewItem;
+            this._bnGeneral.BindingSource = this.homeTypeBindingSource;
             this._bnGeneral.CountItem = this.bindingNavigatorCountItem;
             this._bnGeneral.DeleteItem = this.bindingNavigatorDeleteItem;
             this._bnGeneral.Items.AddRange(new System.Windows.Forms.ToolStripItem[] {
@@ -231,7 +253,12 @@
             this.bindingNavigatorSeparator2,
             this.bindingNavigatorAddNewItem,
             this.bindingNavigatorDeleteItem,
-            this.bindingNavigatorSaveItem});
+            this.bindingNavigatorSaveItem,
+            this.toolStripSeparator1,
+            this._tscmbSearch,
+            this._tcbtnSearch,
+            this.toolStripSeparator2,
+            this._tsbtnExit});
             this._bnGeneral.Location = new System.Drawing.Point(0, 0);
             this._bnGeneral.MoveFirstItem = this.bindingNavigatorMoveFirstItem;
             this._bnGeneral.MoveLastItem = this.bindingNavigatorMoveLastItem;
@@ -239,7 +266,7 @@
             this._bnGeneral.MovePreviousItem = this.bindingNavigatorMovePreviousItem;
             this._bnGeneral.Name = "_bnGeneral";
             this._bnGeneral.PositionItem = this.bindingNavigatorPositionItem;
-            this._bnGeneral.Size = new System.Drawing.Size(480, 25);
+            this._bnGeneral.Size = new System.Drawing.Size(484, 25);
             this._bnGeneral.TabIndex = 6;
             // 
             // bindingNavigatorSaveItem
@@ -250,15 +277,57 @@
             this.bindingNavigatorSaveItem.Name = "bindingNavigatorSaveItem";
             this.bindingNavigatorSaveItem.Size = new System.Drawing.Size(23, 22);
             this.bindingNavigatorSaveItem.Text = "&Save";
+            this.bindingNavigatorSaveItem.ToolTipText = "حفظ";
+            this.bindingNavigatorSaveItem.Click += new System.EventHandler(this.bindingNavigatorSaveItem_Click);
+            // 
+            // toolStripSeparator1
+            // 
+            this.toolStripSeparator1.Name = "toolStripSeparator1";
+            this.toolStripSeparator1.Size = new System.Drawing.Size(6, 25);
+            // 
+            // _tscmbSearch
+            // 
+            this._tscmbSearch.BackColor = System.Drawing.SystemColors.InactiveCaption;
+            this._tscmbSearch.DropDownWidth = 140;
+            this._tscmbSearch.Font = new System.Drawing.Font("Tahoma", 8F, System.Drawing.FontStyle.Bold);
+            this._tscmbSearch.Name = "_tscmbSearch";
+            this._tscmbSearch.Size = new System.Drawing.Size(130, 25);
+            // 
+            // _tcbtnSearch
+            // 
+            this._tcbtnSearch.DisplayStyle = System.Windows.Forms.ToolStripItemDisplayStyle.Image;
+            this._tcbtnSearch.Image = ((System.Drawing.Image)(resources.GetObject("_tcbtnSearch.Image")));
+            this._tcbtnSearch.ImageTransparentColor = System.Drawing.Color.Magenta;
+            this._tcbtnSearch.Name = "_tcbtnSearch";
+            this._tcbtnSearch.Size = new System.Drawing.Size(23, 22);
+            this._tcbtnSearch.Text = "&Search";
+            this._tcbtnSearch.ToolTipText = "بحث";
+            // 
+            // toolStripSeparator2
+            // 
+            this.toolStripSeparator2.Name = "toolStripSeparator2";
+            this.toolStripSeparator2.Size = new System.Drawing.Size(6, 25);
+            // 
+            // _tsbtnExit
+            // 
+            this._tsbtnExit.DisplayStyle = System.Windows.Forms.ToolStripItemDisplayStyle.Image;
+            this._tsbtnExit.Image = ((System.Drawing.Image)(resources.GetObject("_tsbtnExit.Image")));
+            this._tsbtnExit.ImageTransparentColor = System.Drawing.Color.Magenta;
+            this._tsbtnExit.Name = "_tsbtnExit";
+            this._tsbtnExit.Size = new System.Drawing.Size(23, 22);
+            this._tsbtnExit.Text = "toolStripButton1";
+            this._tsbtnExit.ToolTipText = "اغلاق";
+            this._tsbtnExit.Click += new System.EventHandler(this._tsbtnExit_Click);
             // 
             // frmHomeType
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(480, 136);
+            this.ClientSize = new System.Drawing.Size(484, 136);
             this.Controls.Add(this._gbProvince);
             this.Controls.Add(this._ssGeneral);
             this.Controls.Add(this._bnGeneral);
+            this.Font = new System.Drawing.Font("Tahoma", 8F);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedDialog;
             this.MaximizeBox = false;
             this.MinimizeBox = false;
@@ -269,6 +338,7 @@
             this.Text = "انواع السكن";
             this._gbProvince.ResumeLayout(false);
             this._gbProvince.PerformLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.homeTypeBindingSource)).EndInit();
             this._ssGeneral.ResumeLayout(false);
             this._ssGeneral.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this._bnGeneral)).EndInit();
@@ -301,5 +371,11 @@
         private System.Windows.Forms.StatusStrip _ssGeneral;
         private System.Windows.Forms.BindingNavigator _bnGeneral;
         private System.Windows.Forms.ToolStripButton bindingNavigatorSaveItem;
+        private System.Windows.Forms.ToolStripSeparator toolStripSeparator1;
+        private System.Windows.Forms.ToolStripComboBox _tscmbSearch;
+        private System.Windows.Forms.ToolStripButton _tcbtnSearch;
+        private System.Windows.Forms.ToolStripSeparator toolStripSeparator2;
+        private System.Windows.Forms.ToolStripButton _tsbtnExit;
+        private System.Windows.Forms.BindingSource homeTypeBindingSource;
     }
 }

@@ -17,11 +17,10 @@ namespace FM.DataAccess.Data.Repository
         }
         public void Update(CitizenDetailInfo citizenDetailInfo)
         {
-            var objFromDb = _db.CitizenDetailInfos.FirstOrDefault(i => i.CitizenId == citizenDetailInfo.CitizenId);
+            var objFromDb = _db.CitizenDetailInfo.FirstOrDefault(i => i.CitizenId == citizenDetailInfo.CitizenId);
 
-            //objFromDb.ProvinceId = citizenDetailInfo.ProvinceId;
-            //objFromDb.DistrictId = citizenDetailInfo.DistrictId;
-            objFromDb.Sex = citizenDetailInfo.Sex;
+            objFromDb.ProvinceId = citizenDetailInfo.ProvinceId;
+            objFromDb.DistrictId = citizenDetailInfo.DistrictId;
             objFromDb.CityId = citizenDetailInfo.CityId;
             objFromDb.Street = citizenDetailInfo.Street;
             objFromDb.Building = citizenDetailInfo.Building;

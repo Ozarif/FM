@@ -33,7 +33,10 @@ namespace FM.DataAccess.Data.Repository
             FamilyMemberInfo = new FamilyMemberInfoRepository(_db);
             ReferenceInfo = new ReferenceInfoRepository(_db);
             ServiceInfo = new ServiceInfoRepository(_db);
-        }  
+            RegisterPlace = new RegisterPlaceRepository(_db);
+            ReligionSection = new ReligionSectionRepository(_db);
+            Gender = new GenderRepository(_db);
+        }
         public IBusinessSectorRepository BusinessSector {get; private set; }
 
         public IProvinceRepository Province { get; private set; }
@@ -69,6 +72,11 @@ namespace FM.DataAccess.Data.Repository
         public IReferenceInfoRepository ReferenceInfo { get; private set; }
 
         public IServiceInfoRepository ServiceInfo { get; private set; }
+
+        public IRegisterPlaceRepository RegisterPlace { get; private set; }
+
+        public IReligionSectionRepository ReligionSection { get; private set; }
+        public IGenderRepository Gender { get; private set; }
 
         public void Dispose()
         {

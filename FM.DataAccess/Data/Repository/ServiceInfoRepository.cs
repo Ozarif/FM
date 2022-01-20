@@ -17,7 +17,7 @@ namespace FM.DataAccess.Data.Repository
         }
         public void Update(ServiceInfo serviceInfo)
         {
-            var objFromDb = _db.ServiceInfos.FirstOrDefault(i => i.Id == serviceInfo.Id);
+            var objFromDb = _db.ServiceInfo.FirstOrDefault(i => i.Id == serviceInfo.Id);
 
             objFromDb.CitizenId = serviceInfo.CitizenId;
             objFromDb.ServiceTypeId = serviceInfo.ServiceTypeId;

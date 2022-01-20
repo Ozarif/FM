@@ -21,10 +21,22 @@ namespace FM.App
            // Application.Run(new Form1());
         }
 
+        //public static void SetDefaultLanguage()
+        //{
+        //    string strDefaultLanguage = "ar-LB";
+        //    InputLanguage.CurrentInputLanguage = InputLanguage.FromCulture(new System.Globalization.CultureInfo(strDefaultLanguage));
+        //}
+
         public static void SetDefaultLanguage()
         {
-            string strDefaultLanguage = "ar-LB";
-            InputLanguage.CurrentInputLanguage = InputLanguage.FromCulture(new System.Globalization.CultureInfo(strDefaultLanguage));
+           var originalInputLang = InputLanguage.CurrentInputLanguage;
+            var lang = InputLanguage.InstalledInputLanguages.OfType<InputLanguage>().Where(l => l.Culture.Name.StartsWith("ar")).FirstOrDefault();
+            if (lang != null)
+            {
+                InputLanguage.CurrentInputLanguage = lang;
+            }
         }
     }
+
+   
 }

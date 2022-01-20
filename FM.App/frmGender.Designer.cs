@@ -1,6 +1,6 @@
 ﻿namespace FM.App
 {
-    partial class frmResultType
+    partial class frmGender
     {
         /// <summary>
         /// Required designer variable.
@@ -29,14 +29,14 @@
         private void InitializeComponent()
         {
             this.components = new System.ComponentModel.Container();
-            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(frmResultType));
+            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(frmGender));
+            this._ssGeneral = new System.Windows.Forms.StatusStrip();
             this._tssLblGeneral = new System.Windows.Forms.ToolStripStatusLabel();
             this._gbProvince = new System.Windows.Forms.GroupBox();
             this._txtBoxDescription = new System.Windows.Forms.TextBox();
             this._lblDescription = new System.Windows.Forms.Label();
             this._txtBoxId = new System.Windows.Forms.TextBox();
             this._lblId = new System.Windows.Forms.Label();
-            this._ssGeneral = new System.Windows.Forms.StatusStrip();
             this._bnGeneral = new System.Windows.Forms.BindingNavigator(this.components);
             this.bindingNavigatorAddNewItem = new System.Windows.Forms.ToolStripButton();
             this.bindingNavigatorCountItem = new System.Windows.Forms.ToolStripLabel();
@@ -55,11 +55,21 @@
             this._tcbtnSearch = new System.Windows.Forms.ToolStripButton();
             this.toolStripSeparator2 = new System.Windows.Forms.ToolStripSeparator();
             this._tsbtnExit = new System.Windows.Forms.ToolStripButton();
-            this._gbProvince.SuspendLayout();
             this._ssGeneral.SuspendLayout();
+            this._gbProvince.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this._bnGeneral)).BeginInit();
             this._bnGeneral.SuspendLayout();
             this.SuspendLayout();
+            // 
+            // _ssGeneral
+            // 
+            this._ssGeneral.Items.AddRange(new System.Windows.Forms.ToolStripItem[] {
+            this._tssLblGeneral});
+            this._ssGeneral.Location = new System.Drawing.Point(0, 114);
+            this._ssGeneral.Name = "_ssGeneral";
+            this._ssGeneral.RenderMode = System.Windows.Forms.ToolStripRenderMode.Professional;
+            this._ssGeneral.Size = new System.Drawing.Size(480, 22);
+            this._ssGeneral.TabIndex = 10;
             // 
             // _tssLblGeneral
             // 
@@ -78,10 +88,10 @@
             this._gbProvince.Controls.Add(this._lblDescription);
             this._gbProvince.Controls.Add(this._txtBoxId);
             this._gbProvince.Controls.Add(this._lblId);
-            this._gbProvince.Location = new System.Drawing.Point(12, 28);
+            this._gbProvince.Location = new System.Drawing.Point(13, 28);
             this._gbProvince.Name = "_gbProvince";
             this._gbProvince.Size = new System.Drawing.Size(455, 81);
-            this._gbProvince.TabIndex = 7;
+            this._gbProvince.TabIndex = 11;
             this._gbProvince.TabStop = false;
             // 
             // _txtBoxDescription
@@ -89,7 +99,7 @@
             this._txtBoxDescription.BackColor = System.Drawing.SystemColors.InactiveCaption;
             this._txtBoxDescription.Location = new System.Drawing.Point(6, 46);
             this._txtBoxDescription.Name = "_txtBoxDescription";
-            this._txtBoxDescription.Size = new System.Drawing.Size(354, 20);
+            this._txtBoxDescription.Size = new System.Drawing.Size(394, 20);
             this._txtBoxDescription.TabIndex = 3;
             // 
             // _lblDescription
@@ -97,16 +107,16 @@
             this._lblDescription.AutoSize = true;
             this._lblDescription.Font = new System.Drawing.Font("Tahoma", 8F, System.Drawing.FontStyle.Bold);
             this._lblDescription.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(0)))), ((int)(((byte)(64)))));
-            this._lblDescription.Location = new System.Drawing.Point(380, 49);
+            this._lblDescription.Location = new System.Drawing.Point(406, 49);
             this._lblDescription.Name = "_lblDescription";
-            this._lblDescription.Size = new System.Drawing.Size(69, 13);
+            this._lblDescription.Size = new System.Drawing.Size(43, 13);
             this._lblDescription.TabIndex = 2;
-            this._lblDescription.Text = "اسم النتيجة";
+            this._lblDescription.Text = "الجنس";
             // 
             // _txtBoxId
             // 
             this._txtBoxId.BackColor = System.Drawing.SystemColors.InactiveCaption;
-            this._txtBoxId.Location = new System.Drawing.Point(252, 13);
+            this._txtBoxId.Location = new System.Drawing.Point(292, 16);
             this._txtBoxId.Name = "_txtBoxId";
             this._txtBoxId.ReadOnly = true;
             this._txtBoxId.Size = new System.Drawing.Size(108, 20);
@@ -117,21 +127,11 @@
             this._lblId.AutoSize = true;
             this._lblId.Font = new System.Drawing.Font("Tahoma", 8F, System.Drawing.FontStyle.Bold);
             this._lblId.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(0)))), ((int)(((byte)(64)))));
-            this._lblId.Location = new System.Drawing.Point(414, 16);
+            this._lblId.Location = new System.Drawing.Point(411, 16);
             this._lblId.Name = "_lblId";
-            this._lblId.Size = new System.Drawing.Size(35, 13);
+            this._lblId.Size = new System.Drawing.Size(38, 13);
             this._lblId.TabIndex = 0;
-            this._lblId.Text = "الرقم";
-            // 
-            // _ssGeneral
-            // 
-            this._ssGeneral.Items.AddRange(new System.Windows.Forms.ToolStripItem[] {
-            this._tssLblGeneral});
-            this._ssGeneral.Location = new System.Drawing.Point(0, 114);
-            this._ssGeneral.Name = "_ssGeneral";
-            this._ssGeneral.RenderMode = System.Windows.Forms.ToolStripRenderMode.Professional;
-            this._ssGeneral.Size = new System.Drawing.Size(480, 22);
-            this._ssGeneral.TabIndex = 8;
+            this._lblId.Text = "الرقم ";
             // 
             // _bnGeneral
             // 
@@ -164,7 +164,7 @@
             this._bnGeneral.Name = "_bnGeneral";
             this._bnGeneral.PositionItem = this.bindingNavigatorPositionItem;
             this._bnGeneral.Size = new System.Drawing.Size(480, 25);
-            this._bnGeneral.TabIndex = 9;
+            this._bnGeneral.TabIndex = 12;
             // 
             // bindingNavigatorAddNewItem
             // 
@@ -306,7 +306,7 @@
             this._tsbtnExit.Text = "toolStripButton1";
             this._tsbtnExit.ToolTipText = "اغلاق";
             // 
-            // frmResultType
+            // frmGender
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
@@ -317,15 +317,14 @@
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedDialog;
             this.MaximizeBox = false;
             this.MinimizeBox = false;
-            this.Name = "frmResultType";
+            this.Name = "frmGender";
             this.RightToLeft = System.Windows.Forms.RightToLeft.Yes;
             this.RightToLeftLayout = true;
-            this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
-            this.Text = "نتائج الخدمات";
-            this._gbProvince.ResumeLayout(false);
-            this._gbProvince.PerformLayout();
+            this.Text = "الجنس";
             this._ssGeneral.ResumeLayout(false);
             this._ssGeneral.PerformLayout();
+            this._gbProvince.ResumeLayout(false);
+            this._gbProvince.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this._bnGeneral)).EndInit();
             this._bnGeneral.ResumeLayout(false);
             this._bnGeneral.PerformLayout();
@@ -336,13 +335,13 @@
 
         #endregion
 
+        private System.Windows.Forms.StatusStrip _ssGeneral;
         private System.Windows.Forms.ToolStripStatusLabel _tssLblGeneral;
         private System.Windows.Forms.GroupBox _gbProvince;
         private System.Windows.Forms.TextBox _txtBoxDescription;
         private System.Windows.Forms.Label _lblDescription;
         private System.Windows.Forms.TextBox _txtBoxId;
         private System.Windows.Forms.Label _lblId;
-        private System.Windows.Forms.StatusStrip _ssGeneral;
         private System.Windows.Forms.BindingNavigator _bnGeneral;
         private System.Windows.Forms.ToolStripButton bindingNavigatorAddNewItem;
         private System.Windows.Forms.ToolStripLabel bindingNavigatorCountItem;

@@ -17,7 +17,7 @@ namespace FM.DataAccess.Data.Repository
         }
         public void Update(ReferenceInfo referenceInfo)
         {
-            var objFromDb = _db.ReferenceInfos.FirstOrDefault(i => i.Id == referenceInfo.Id);
+            var objFromDb = _db.ReferenceInfo.FirstOrDefault(i => i.Id == referenceInfo.Id);
 
             objFromDb.CitizenId = referenceInfo.CitizenId;
             objFromDb.Name = referenceInfo.Name;

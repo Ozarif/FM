@@ -60,6 +60,7 @@
     <Compile Include="Data\Repository\EducationalLevelRepository.cs" />
     <Compile Include="Data\Repository\ElectionRoleRepository.cs" />
     <Compile Include="Data\Repository\FamilyMemberInfoRepository.cs" />
+    <Compile Include="Data\Repository\GenderRepository.cs" />
     <Compile Include="Data\Repository\HomeTypeRepository.cs" />
     <Compile Include="Data\Repository\IRepository\IBusinessSectorRepository.cs" />
     <Compile Include="Data\Repository\IRepository\ICitizenDetailInfoRepository.cs" />
@@ -69,6 +70,7 @@
     <Compile Include="Data\Repository\IRepository\IEducationalLevelRepository.cs" />
     <Compile Include="Data\Repository\IRepository\IElectionRoleRepository.cs" />
     <Compile Include="Data\Repository\IRepository\IFamilyMemberInfoRepository.cs" />
+    <Compile Include="Data\Repository\IRepository\IGenderRepository.cs" />
     <Compile Include="Data\Repository\IRepository\IHomeTypeRepository.cs" />
     <Compile Include="Data\Repository\IRepository\IMaritalStatusRepository.cs" />
     <Compile Include="Data\Repository\IRepository\IMemberRelationTypeRepository.cs" />
@@ -76,6 +78,8 @@
     <Compile Include="Data\Repository\IRepository\IPartyPositionRepository.cs" />
     <Compile Include="Data\Repository\IRepository\IProvinceRepository.cs" />
     <Compile Include="Data\Repository\IRepository\IReferenceInfoRepository.cs" />
+    <Compile Include="Data\Repository\IRepository\IRegisterPlaceRepository.cs" />
+    <Compile Include="Data\Repository\IRepository\IReligionSectionRepository.cs" />
     <Compile Include="Data\Repository\IRepository\IRepository.cs" />
     <Compile Include="Data\Repository\IRepository\IResultTypeRepository.cs" />
     <Compile Include="Data\Repository\IRepository\IServiceInfoRepository.cs" />
@@ -87,18 +91,16 @@
     <Compile Include="Data\Repository\PartyPositionRepository.cs" />
     <Compile Include="Data\Repository\ProvinceRepository.cs" />
     <Compile Include="Data\Repository\ReferenceInfoRepository.cs" />
+    <Compile Include="Data\Repository\RegisterPlaceRepository.cs" />
+    <Compile Include="Data\Repository\ReligionSectionRepository.cs" />
     <Compile Include="Data\Repository\Repository.cs" />
     <Compile Include="Data\Repository\ResultTypeRepository.cs" />
     <Compile Include="Data\Repository\ServiceInfoRepository.cs" />
     <Compile Include="Data\Repository\ServiceTypeRepositorycs.cs" />
     <Compile Include="Data\Repository\UnitOfWork.cs" />
-    <Compile Include="Migrations\202106240744155_InitialDatabase.cs" />
-    <Compile Include="Migrations\202106240744155_InitialDatabase.designer.cs">
-      <DependentUpon>202106240744155_InitialDatabase.cs</DependentUpon>
-    </Compile>
-    <Compile Include="Migrations\202107130859483_NewModifications.cs" />
-    <Compile Include="Migrations\202107130859483_NewModifications.designer.cs">
-      <DependentUpon>202107130859483_NewModifications.cs</DependentUpon>
+    <Compile Include="Migrations\202201191923184_ChangesToModels.cs" />
+    <Compile Include="Migrations\202201191923184_ChangesToModels.designer.cs">
+      <DependentUpon>202201191923184_ChangesToModels.cs</DependentUpon>
     </Compile>
     <Compile Include="Migrations\Configuration.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
@@ -114,11 +116,8 @@
     </ProjectReference>
   </ItemGroup>
   <ItemGroup>
-    <EmbeddedResource Include="Migrations\202106240744155_InitialDatabase.resx">
-      <DependentUpon>202106240744155_InitialDatabase.cs</DependentUpon>
-    </EmbeddedResource>
-    <EmbeddedResource Include="Migrations\202107130859483_NewModifications.resx">
-      <DependentUpon>202107130859483_NewModifications.cs</DependentUpon>
+    <EmbeddedResource Include="Migrations\202201191923184_ChangesToModels.resx">
+      <DependentUpon>202201191923184_ChangesToModels.cs</DependentUpon>
     </EmbeddedResource>
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />

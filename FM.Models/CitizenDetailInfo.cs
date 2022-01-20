@@ -12,30 +12,18 @@ namespace FM.Models
     {
 
         [Key]
-        [ForeignKey("Citizen")]
+    //    [ForeignKey("Citizen")]
         public int CitizenId { get; set; }
-        public virtual Citizen Citizen { get; set; }
 
         [Required]
-        [MaxLength(100)]
-        public string Sex { get; set; }
-        //[Required]
-        //public int ProvinceId { get; set; }
+        public int ProvinceId { get; set; }
 
-        //[ForeignKey("ProvinceId")]
-        //public Province Province { get; set; }
-
-        //[Required]
-        //public int DistrictId { get; set; }
-
-        //[ForeignKey("DistrictId")]
-        //public District District { get; set; }
+   
+        [Required]
+        public int DistrictId { get; set; }
 
         [Required]
         public int CityId { get; set; }
-
-        [ForeignKey("CityId")]
-        public City City { get; set; }
 
         [MaxLength(100)]
         public string Street { get; set; }

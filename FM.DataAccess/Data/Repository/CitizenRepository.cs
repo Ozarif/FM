@@ -24,12 +24,13 @@ namespace FM.DataAccess.Data.Repository
             objFromDb.LastName = citizen.LastName;
             objFromDb.MotherFullName = citizen.MotherFullName;
             objFromDb.DateOfBirth = citizen.DateOfBirth;
-            objFromDb.Province = citizen.Province;
-            objFromDb.District = citizen.District;
-            objFromDb.RegisterPlace = citizen.RegisterPlace;
+            objFromDb.ProvinceID = citizen.ProvinceID;
+            objFromDb.DistrictID = citizen.DistrictID;
+            objFromDb.RegisterPlaceID = citizen.RegisterPlaceID;
             objFromDb.RegisterNumber = citizen.RegisterNumber;
-            objFromDb.Religion = citizen.Religion;
-            objFromDb.ReligionSect = citizen.ReligionSect;    
+            objFromDb.PersonalReligionSectionID = citizen.PersonalReligionSectionID;
+            objFromDb.RegisterReligionSectionID = citizen.RegisterReligionSectionID;
+            objFromDb.Gender = citizen.Gender;    
 
             _db.SaveChanges();
         }

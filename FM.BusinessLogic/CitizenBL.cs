@@ -25,14 +25,19 @@ namespace FM.BusinessLogic
             return _unitOfWork.Citizen.GetAll();
         }
 
-        public IEnumerable<Citizen> Search(string firstName , string fatherName, string lastName)
+        //public IEnumerable<Citizen> Search(string firstName = default(string), string fatherName = default(string), string lastName = default(string))
+        //{
+        //    return _unitOfWork.Citizen.GetAll(filter: s =>
+        //                        (string.IsNullOrEmpty(firstName) || s.FirstName.Trim().Contains(firstName)) &&
+        //                        (string.IsNullOrEmpty(fatherName) || s.FatherName.Trim().Contains(fatherName)) &&
+        //                        (string.IsNullOrEmpty(lastName) || s.LastName.Trim().Contains(lastName)),
+        //                        orderBy: q => q.OrderBy(d => d.FirstName)
+        //        );
+        //}
+
+        public IEnumerable<Citizen> Search(Expression<Func<Citizen, bool>> filter = null,Func<IQueryable<Citizen>, IOrderedQueryable<Citizen>> orderBy = null)
         {
-            return _unitOfWork.Citizen.GetAll(filter: s =>
-                                (string.IsNullOrEmpty(firstName) || s.FirstName.Trim().Contains(firstName)) &&
-                                (string.IsNullOrEmpty(fatherName) || s.FatherName.Trim().Contains(fatherName)) &&
-                                (string.IsNullOrEmpty(lastName) || s.LastName.Trim().Contains(lastName)),
-                                orderBy: q => q.OrderBy(d => d.FirstName)
-                );
+            return _unitOfWork.Citizen.GetAll(filter: filter, orderBy: orderBy);
         }
 
         public Citizen Get(int Id)

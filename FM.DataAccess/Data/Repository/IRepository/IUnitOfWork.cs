@@ -27,6 +27,9 @@ namespace FM.DataAccess.Data.Repository.IRepository
         IFamilyMemberInfoRepository FamilyMemberInfo { get; }
         IReferenceInfoRepository ReferenceInfo { get; }
         IServiceInfoRepository ServiceInfo { get; }
+        IRegisterPlaceRepository RegisterPlace { get; }
+        IReligionSectionRepository ReligionSection { get; }
+        IGenderRepository Gender { get; }
         bool Save();
 
     }

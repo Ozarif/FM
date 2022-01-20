@@ -95,6 +95,12 @@
     <Compile Include="frmElectionRole.Designer.cs">
       <DependentUpon>frmElectionRole.cs</DependentUpon>
     </Compile>
+    <Compile Include="frmGender.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frmGender.Designer.cs">
+      <DependentUpon>frmGender.cs</DependentUpon>
+    </Compile>
     <Compile Include="frmHomeType.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -137,6 +143,12 @@
     <Compile Include="frmProvince.Designer.cs">
       <DependentUpon>frmProvince.cs</DependentUpon>
     </Compile>
+    <Compile Include="frmReligionSection.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frmReligionSection.Designer.cs">
+      <DependentUpon>frmReligionSection.cs</DependentUpon>
+    </Compile>
     <Compile Include="frmResultType.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -164,6 +176,9 @@
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="SD.cs" />
+    <EmbeddedResource Include="BaseForm.resx">
+      <DependentUpon>BaseForm.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="Form1.resx">
       <DependentUpon>Form1.cs</DependentUpon>
     </EmbeddedResource>
@@ -181,6 +196,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="frmElectionRole.resx">
       <DependentUpon>frmElectionRole.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="frmGender.resx">
+      <DependentUpon>frmGender.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="frmHomeType.resx">
       <DependentUpon>frmHomeType.cs</DependentUpon>
@@ -202,6 +220,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="frmProvince.resx">
       <DependentUpon>frmProvince.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="frmReligionSection.resx">
+      <DependentUpon>frmReligionSection.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="frmResultType.resx">
       <DependentUpon>frmResultType.cs</DependentUpon>
@@ -225,7 +246,6 @@
       <DependentUpon>Resources.resx</DependentUpon>
     </Compile>
     <None Include="packages.config" />
-    <None Include="Properties\DataSources\FM.Models.Citizen.datasource" />
     <None Include="Properties\Settings.settings">
       <Generator>SettingsSingleFileGenerator</Generator>
       <LastGenOutput>Settings.Designer.cs</LastGenOutput>
