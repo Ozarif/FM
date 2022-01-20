@@ -10,7 +10,7 @@ using System.Windows.Forms;
 
 namespace FM.App
 {
-    public partial class frmBusinessSector : Form
+    public partial class frmBusinessSector : BaseForm
     {
         public frmBusinessSector()
         {

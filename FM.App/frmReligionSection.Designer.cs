@@ -55,10 +55,12 @@
             this._tcbtnSearch = new System.Windows.Forms.ToolStripButton();
             this.toolStripSeparator2 = new System.Windows.Forms.ToolStripSeparator();
             this._tsbtnExit = new System.Windows.Forms.ToolStripButton();
+            this.religionSectionBindingSource = new System.Windows.Forms.BindingSource(this.components);
             this._ssGeneral.SuspendLayout();
             this._gbGeneral.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this._bnGeneral)).BeginInit();
             this._bnGeneral.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.religionSectionBindingSource)).BeginInit();
             this.SuspendLayout();
             // 
             // _ssGeneral
@@ -97,6 +99,7 @@
             // _txtBoxName
             // 
             this._txtBoxName.BackColor = System.Drawing.SystemColors.InactiveCaption;
+            this._txtBoxName.DataBindings.Add(new System.Windows.Forms.Binding("Text", this.religionSectionBindingSource, "Name", true));
             this._txtBoxName.Location = new System.Drawing.Point(6, 46);
             this._txtBoxName.Name = "_txtBoxName";
             this._txtBoxName.Size = new System.Drawing.Size(389, 20);
@@ -116,6 +119,7 @@
             // _txtBoxId
             // 
             this._txtBoxId.BackColor = System.Drawing.SystemColors.InactiveCaption;
+            this._txtBoxId.DataBindings.Add(new System.Windows.Forms.Binding("Text", this.religionSectionBindingSource, "Id", true));
             this._txtBoxId.Location = new System.Drawing.Point(287, 13);
             this._txtBoxId.Name = "_txtBoxId";
             this._txtBoxId.ReadOnly = true;
@@ -136,6 +140,7 @@
             // _bnGeneral
             // 
             this._bnGeneral.AddNewItem = this.bindingNavigatorAddNewItem;
+            this._bnGeneral.BindingSource = this.religionSectionBindingSource;
             this._bnGeneral.CountItem = this.bindingNavigatorCountItem;
             this._bnGeneral.DeleteItem = this.bindingNavigatorDeleteItem;
             this._bnGeneral.Items.AddRange(new System.Windows.Forms.ToolStripItem[] {
@@ -306,6 +311,10 @@
             this._tsbtnExit.Text = "toolStripButton1";
             this._tsbtnExit.ToolTipText = "اغلاق";
             // 
+            // religionSectionBindingSource
+            // 
+            this.religionSectionBindingSource.DataSource = typeof(FM.Models.ReligionSection);
+            // 
             // frmReligionSection
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -329,6 +338,7 @@
             ((System.ComponentModel.ISupportInitialize)(this._bnGeneral)).EndInit();
             this._bnGeneral.ResumeLayout(false);
             this._bnGeneral.PerformLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.religionSectionBindingSource)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -361,5 +371,6 @@
         private System.Windows.Forms.ToolStripButton _tcbtnSearch;
         private System.Windows.Forms.ToolStripSeparator toolStripSeparator2;
         private System.Windows.Forms.ToolStripButton _tsbtnExit;
+        private System.Windows.Forms.BindingSource religionSectionBindingSource;
     }
 }

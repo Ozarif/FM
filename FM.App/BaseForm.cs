@@ -9,7 +9,7 @@ namespace FM.App
 {
    public  class BaseForm : Form
     {
-     //   protected  BindingSource _bindingSource = new BindingSource();
+
         public BaseForm()
         {
             SetApplicationLanguage();

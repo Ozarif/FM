@@ -10,7 +10,7 @@ using System.Windows.Forms;
 
 namespace FM.App
 {
-    public partial class frmElectionRole : Form
+    public partial class frmElectionRole : BaseForm
     {
         public frmElectionRole()
         {

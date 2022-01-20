@@ -8,6 +8,8 @@ namespace FM.App
 {
     static class Program
     {
+        
+        
         /// <summary>
         /// The main entry point for the application.
         /// </summary>
@@ -26,10 +28,15 @@ namespace FM.App
         //    string strDefaultLanguage = "ar-LB";
         //    InputLanguage.CurrentInputLanguage = InputLanguage.FromCulture(new System.Globalization.CultureInfo(strDefaultLanguage));
         //}
+        public static InputLanguage OriginalInputLanguage
+        {
+            get;
+            private set;
+        }
 
         public static void SetDefaultLanguage()
         {
-           var originalInputLang = InputLanguage.CurrentInputLanguage;
+            OriginalInputLanguage = InputLanguage.CurrentInputLanguage;
             var lang = InputLanguage.InstalledInputLanguages.OfType<InputLanguage>().Where(l => l.Culture.Name.StartsWith("ar")).FirstOrDefault();
             if (lang != null)
             {

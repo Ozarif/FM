@@ -10,7 +10,7 @@ using System.Windows.Forms;
 
 namespace FM.App
 {
-    public partial class frmEducationalLevel : Form
+    public partial class frmEducationalLevel : BaseForm
     {
         public frmEducationalLevel()
         {

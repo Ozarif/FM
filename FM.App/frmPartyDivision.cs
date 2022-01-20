@@ -10,7 +10,7 @@ using System.Windows.Forms;
 
 namespace FM.App
 {
-    public partial class frmPartyDivision : Form
+    public partial class frmPartyDivision : BaseForm
     {
         public frmPartyDivision()
         {

@@ -246,6 +246,17 @@
       <DependentUpon>Resources.resx</DependentUpon>
     </Compile>
     <None Include="packages.config" />
+    <None Include="Properties\DataSources\FM.Models.BusinessSector.datasource" />
+    <None Include="Properties\DataSources\FM.Models.EducationalLevel.datasource" />
+    <None Include="Properties\DataSources\FM.Models.ElectionRole.datasource" />
+    <None Include="Properties\DataSources\FM.Models.Gender.datasource" />
+    <None Include="Properties\DataSources\FM.Models.MaritalStatus.datasource" />
+    <None Include="Properties\DataSources\FM.Models.MemberRelationType.datasource" />
+    <None Include="Properties\DataSources\FM.Models.PartyDivision.datasource" />
+    <None Include="Properties\DataSources\FM.Models.PartyPosition.datasource" />
+    <None Include="Properties\DataSources\FM.Models.ReligionSection.datasource" />
+    <None Include="Properties\DataSources\FM.Models.ResultType.datasource" />
+    <None Include="Properties\DataSources\FM.Models.ServiceType.datasource" />
     <None Include="Properties\Settings.settings">
       <Generator>SettingsSingleFileGenerator</Generator>
       <LastGenOutput>Settings.Designer.cs</LastGenOutput>

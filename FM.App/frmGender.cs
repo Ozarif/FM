@@ -10,7 +10,7 @@ using System.Windows.Forms;
 
 namespace FM.App
 {
-    public partial class frmGender : Form
+    public partial class frmGender : BaseForm
     {
         public frmGender()
         {

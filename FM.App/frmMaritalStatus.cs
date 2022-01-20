@@ -10,7 +10,7 @@ using System.Windows.Forms;
 
 namespace FM.App
 {
-    public partial class frmMaritalStatus : Form
+    public partial class frmMaritalStatus : BaseForm
     {
         public frmMaritalStatus()
         {

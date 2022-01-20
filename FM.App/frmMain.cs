@@ -22,6 +22,7 @@ namespace FM.App
 
         private void _tsmiExit_Click(object sender, EventArgs e)
         {
+            
             Application.Exit();
         }
 
@@ -133,6 +134,7 @@ namespace FM.App
                                 MessageBoxOptions.RightAlign);
                     e.Cancel = true;
                 }
+                InputLanguage.CurrentInputLanguage = Program.OriginalInputLanguage;
             }
             else
             {

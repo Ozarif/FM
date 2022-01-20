@@ -10,7 +10,7 @@ using System.Windows.Forms;
 
 namespace FM.App
 {
-    public partial class frmServiceType : Form
+    public partial class frmServiceType : BaseForm
     {
         public frmServiceType()
         {

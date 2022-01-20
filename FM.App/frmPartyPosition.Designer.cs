@@ -55,10 +55,12 @@
             this._tcbtnSearch = new System.Windows.Forms.ToolStripButton();
             this.toolStripSeparator2 = new System.Windows.Forms.ToolStripSeparator();
             this._tsbtnExit = new System.Windows.Forms.ToolStripButton();
+            this.partyPositionBindingSource = new System.Windows.Forms.BindingSource(this.components);
             this._gbProvince.SuspendLayout();
             this._ssGeneral.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this._bnGeneral)).BeginInit();
             this._bnGeneral.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.partyPositionBindingSource)).BeginInit();
             this.SuspendLayout();
             // 
             // _tssLblGeneral
@@ -87,6 +89,7 @@
             // _txtBoxDescription
             // 
             this._txtBoxDescription.BackColor = System.Drawing.SystemColors.InactiveCaption;
+            this._txtBoxDescription.DataBindings.Add(new System.Windows.Forms.Binding("Text", this.partyPositionBindingSource, "Discription", true));
             this._txtBoxDescription.Location = new System.Drawing.Point(6, 46);
             this._txtBoxDescription.Name = "_txtBoxDescription";
             this._txtBoxDescription.Size = new System.Drawing.Size(354, 20);
@@ -106,6 +109,7 @@
             // _txtBoxId
             // 
             this._txtBoxId.BackColor = System.Drawing.SystemColors.InactiveCaption;
+            this._txtBoxId.DataBindings.Add(new System.Windows.Forms.Binding("Text", this.partyPositionBindingSource, "Id", true));
             this._txtBoxId.Location = new System.Drawing.Point(252, 13);
             this._txtBoxId.Name = "_txtBoxId";
             this._txtBoxId.ReadOnly = true;
@@ -136,6 +140,7 @@
             // _bnGeneral
             // 
             this._bnGeneral.AddNewItem = this.bindingNavigatorAddNewItem;
+            this._bnGeneral.BindingSource = this.partyPositionBindingSource;
             this._bnGeneral.CountItem = this.bindingNavigatorCountItem;
             this._bnGeneral.DeleteItem = this.bindingNavigatorDeleteItem;
             this._bnGeneral.Items.AddRange(new System.Windows.Forms.ToolStripItem[] {
@@ -306,6 +311,10 @@
             this._tsbtnExit.Text = "toolStripButton1";
             this._tsbtnExit.ToolTipText = "اغلاق";
             // 
+            // partyPositionBindingSource
+            // 
+            this.partyPositionBindingSource.DataSource = typeof(FM.Models.PartyPosition);
+            // 
             // frmPartyPosition
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -329,6 +338,7 @@
             ((System.ComponentModel.ISupportInitialize)(this._bnGeneral)).EndInit();
             this._bnGeneral.ResumeLayout(false);
             this._bnGeneral.PerformLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.partyPositionBindingSource)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -361,5 +371,6 @@
         private System.Windows.Forms.ToolStripButton _tcbtnSearch;
         private System.Windows.Forms.ToolStripSeparator toolStripSeparator2;
         private System.Windows.Forms.ToolStripButton _tsbtnExit;
+        private System.Windows.Forms.BindingSource partyPositionBindingSource;
     }
 }

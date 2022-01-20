@@ -10,7 +10,7 @@ using System.Windows.Forms;
 
 namespace FM.App
 {
-    public partial class frmResultType : Form
+    public partial class frmResultType : BaseForm
     {
         public frmResultType()
         {

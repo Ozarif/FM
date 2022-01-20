@@ -38,6 +38,7 @@ namespace FM.App
 
         private void dataGridView1_DoubleClick(object sender, EventArgs e)
         {
+
             if (dataGridView1.Rows.Count > 0)
             {
 

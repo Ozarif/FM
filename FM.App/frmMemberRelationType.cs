@@ -10,7 +10,7 @@ using System.Windows.Forms;
 
 namespace FM.App
 {
-    public partial class frmMemberRelationType : Form
+    public partial class frmMemberRelationType : BaseForm
     {
         public frmMemberRelationType()
         {

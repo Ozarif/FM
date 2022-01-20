@@ -10,7 +10,7 @@ using System.Windows.Forms;
 
 namespace FM.App
 {
-    public partial class frmReligionSection : Form
+    public partial class frmReligionSection : BaseForm
     {
         public frmReligionSection()
         {

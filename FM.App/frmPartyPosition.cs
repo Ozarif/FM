@@ -10,7 +10,7 @@ using System.Windows.Forms;
 
 namespace FM.App
 {
-    public partial class frmPartyPosition : Form
+    public partial class frmPartyPosition : BaseForm
     {
         public frmPartyPosition()
         {
